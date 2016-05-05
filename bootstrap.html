@@ -25,6 +25,11 @@
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
 
+		<!-- Bootstrap 4 -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+		<script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -45,6 +50,198 @@
 					</p>
 				</section>
 				<!-- 1 -->
+				<section>
+					<h2>HTML & CSS Review</h2>
+				</section>
+
+				<section>
+					<h2>Anatomy of a website</h2>
+					Your Content<br/>
+					+ HTML: Structure<br/>
+					+ CSS: Presentation<br/>
+					= Your Website
+				</section>
+
+				<section>
+					<h2>Anatomy of an HTML element</h2>
+					<ul>
+						<li>Element: An individual component of HTML</li>
+						<li>Tag: Marks the beginning &amp; end of an element with
+opening and closing tags</li>
+						<li>Attribute: Provides additional information about the HTML element</li>
+						<li>Value: What's assigned to a given attribute</li>
+					</ul>
+					<p>What are some elements you learned?</p>
+				</section>
+
+				<section>
+					<h2>Nesting</h2>
+					<p>Nesting is what happens when you put other containing tags inside other containing tags.</p>
+					<pre><code data-trim contenteditable>
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;A paragraph inside a list item&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Elements We Learned</h2>
+					<ul>
+						<li>Paragraph</li>
+						<li>Heading</li>
+						<li>Emphasis, strong</li>
+						<li>Anchor (link)</li>
+						<li>Image</li>
+						<li>Line break</li>
+						<li>List (unordered, ordered), list item</li>
+						<li>Tables (and their required elements)</li>
+						<li>Division, Span</li>
+						<li>Comments</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>The CSS Rule</h2>
+					<pre><code data-trim contenteditable>
+selector {
+  property: value;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>How to add CSS to your HTML</h2>
+					<pre><code data-trim contenteditable>
+<!-- inline -->
+<p style="color:red">Some text.</p>
+
+<!-- embedded-->
+&lt;head&gt;
+  <style type="text/css">
+    p {
+      color: blue;
+    }
+  </style>
+&lt;/head&gt;
+
+<!-- linked -->
+&lt;head&gt;
+  &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+&lt;/head&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Properties We Learned</h2>
+					<ul>
+						<li>Color</li>
+						<li>Background-color</li>
+						<li>Font (and related)</li>
+						<li>Position</li>
+				</section>
+
+				<section>
+					<h2>Specificity (in descending order)</h2>
+					<ol>
+						<li>style&nbsp;attribute</li>
+						<li>ID</li>
+						<li>Class</li>
+						<li>Element</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Block vs. Inline</h2>
+					<img src="image/example-blockinline.png">
+					<p>What are some block elements?</p>
+					<p>What are some inline elements?</p>
+				</section>
+
+				<section>
+					<h2>The Box Model</h2>
+					<img src="image/box-model.png">
+				</section>
+
+				<section>
+					<h2>Forms</h2>
+					<p>Bootstrap makes styling forms easy and fast.</p>
+				</section>
+
+				<section>
+					<h2>.form-group</h2>
+					<p>Use .form-group to organize your forms</p>
+					<p>Can be used on block elements like fieldset or div</p>
+					<iframe height='266' scrolling='no' src='//codepen.io/mjawili/embed/LNMjvm/?height=266&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/mjawili/pen/LNMjvm/'>LNMjvm</a> by Mary Ann Jawili (<a href='http://codepen.io/mjawili'>@mjawili</a>) on <a href='http://codepen.io'>CodePen</a>.
+					</iframe>
+				</section>
+
+				<section>
+					<h2>.form-control</h2>
+					<p>Use to style...</p>
+					<ul>
+						<li>Textual inputs (e.g. text, number, email, color, etc.)</li>
+						<li>Select menus</li>
+						<li>Textareas</li>
+					</ul>
+					<iframe height='266' scrolling='no' src='//codepen.io/mjawili/embed/LNMjvm/?height=266&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/mjawili/pen/LNMjvm/'>LNMjvm</a> by Mary Ann Jawili (<a href='http://codepen.io/mjawili'>@mjawili</a>) on <a href='http://codepen.io'>CodePen</a>.
+					</iframe>
+				</section>
+
+				<section>
+					<h2>.radio and .checkbox</h2>
+					<p>Use to style radios and checkboxes, of course.</p>
+					<iframe height='266' scrolling='no' src='//codepen.io/mjawili/embed/bpOodd/?height=266&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/mjawili/pen/bpOodd/'>.checkbox and .radio</a> by Mary Ann Jawili (<a href='http://codepen.io/mjawili'>@mjawili</a>) on <a href='http://codepen.io'>CodePen</a>.
+					</iframe>
+				</section>
+
+				<section>
+					<h2>Buttons</h2>
+					<p>Add a .btn class along with a style class to your button.</p>
+					<p>Bootstrap has six styles and variations.</p>
+					<iframe height='266' scrolling='no' src='//codepen.io/mjawili/embed/oxJGXP/?height=266&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/mjawili/pen/oxJGXP/'>buttons</a> by Mary Ann Jawili (<a href='http://codepen.io/mjawili'>@mjawili</a>) on <a href='http://codepen.io'>CodePen</a>.
+					</iframe>
+				</section>
+
+				<section>
+					<h2>Button tweaks</h2>
+					<p>Use .btn-lg or .btn-sm for larger or smaller buttons, respectively.</p>
+					<p>Use .btn-block for block-level buttons.</p>
+					<p>Use disabled attribute to disable your buttons.</p>
+					<iframe height='266' scrolling='no' src='//codepen.io/mjawili/embed/WwLZQr/?height=266&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/mjawili/pen/WwLZQr/'>button tweaks</a> by Mary Ann Jawili (<a href='http://codepen.io/mjawili'>@mjawili</a>) on <a href='http://codepen.io'>CodePen</a>.
+					</iframe>
+				</section>
+
+				<section>
+					<h2>Modals</h2>
+					<p>Modals are prettier versions of dialog prompts!</p>
+					<iframe height='266' scrolling='no' src='//codepen.io/mjawili/embed/dMwVYg/?height=266&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/mjawili/pen/dMwVYg/'>modals</a> by Mary Ann Jawili (<a href='http://codepen.io/mjawili'>@mjawili</a>) on <a href='http://codepen.io'>CodePen</a>.
+					</iframe>
+				</section>
+
+				<section>
+					<h2>Alerts</h2>
+					<p>Alerts provide contextual feedback messages for typical user actions. Bootstrap has four styles.</p>
+					<iframe height='266' scrolling='no' src='//codepen.io/mjawili/embed/wGRrWa/?height=266&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/mjawili/pen/wGRrWa/'>alerts</a> by Mary Ann Jawili (<a href='http://codepen.io/mjawili'>@mjawili</a>) on <a href='http://codepen.io'>CodePen</a>.
+					</iframe>	
+				</section>
+
+				<section>
+					<h2>Exercise: Contact Me form</h2>
+					<p>Add a contact form to your website so that your visitors may reach you.</p>
+					<p>Inputs to consider:</p>
+					<ul>
+						<li>Name</li>
+						<li>Email</li>
+						<li>Subject</li>
+						<li>Message</li>
+						<li>Send button</li>
+					</ul>
+					<iframe height='266' scrolling='no' src='//codepen.io/mjawili/embed/mPaBEY/?height=266&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/mjawili/pen/mPaBEY/'>alerts</a> by Mary Ann Jawili (<a href='http://codepen.io/mjawili'>@mjawili</a>) on <a href='http://codepen.io'>CodePen</a>.
+					</iframe>
+				</section>
+
 				<section>
 					<h2>What is Boostrap?</h2>
 
