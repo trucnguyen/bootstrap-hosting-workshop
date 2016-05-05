@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>GitHub & Version Control - Girl Develop It</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+<!-- 
+
+http://www.teaching-materials.org/git/slides.html#slide9
+http://gdiseattle.github.io/gdi-core-html-css/class4.html#/19
+Version Control / Intro to Github
+Why version control 
+Differents of Version Control/history
+CVS/SVN/Perforce centralized
+Github/Mercurial decentralized
+Command line vs Desktop app
+Exercise – set up account on Github; explore teaching-materials repo. 
+Download Github Desktop app
+
+-->
+
+		<div class="reveal">
+
+
+
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Version Control &</h1>
+                    <h1>Github</h1>
+				</section>
+				<!-- 1 -->
+
+				<section> 
+					<h2>Version Control Systems</h2>
+					<p>VCSs keep track of changes to files.</p>
+
+					<p>Why do we use them?</p>
+					<ul>
+					  <li>History: Rolling back and Diffing</li>
+					  <li>Collaboration: Sharing, Merging, and Blaming</li>
+					</ul>
+				</section>
+
+				<section> 
+					<h2>Example Flow A</h2>
+				     <p>Alice creates this code and commits it as version 0:</p>
+<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+function addTwo(num) {
+  return num + 2;
+}
+</code></pre>
+<p>Alice edits and commits as version 1:</p>
+<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+function addThree(num) {
+  return num + 3;
+}
+</code></pre> 
+				</section>
+
+				<section> 
+					<h2>Example Flow B</h2>
+					<p>Bob pulls the code from version 0 and edits:</p>
+<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+function addTwo(num) {
+  if (num == Infinity) {
+    alert("Cant add to infinity!");
+  }
+  return num + 2;
+}
+</code></pre>
+<p>Bob pulls in Alice's updates (version 1) and the VCS merges:</p>
+<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+function addThree(num) {			// Alice v1
+  if (num == Infinity) {			// Bob update to v0
+    alert("Cant add to infinity!");	// Bob update to v0
+  }					// Bob update to v0
+  return num + 3;				// Alices v1
+}
+</code></pre> 
+<p>Bob pushes the merged code above (version 2).</p>
+
+				</section>
+ 
+ 				<section> 
+					<h2>Centralized vs Distributed</h2>
+					    <div class="sl-block-content" style="z-index: 12;">
+
+					     <table>
+     <tr>
+       <th></th>
+       <th>Centralized</th>
+       <th>Distributed</th>
+     </tr>
+ <tr>
+  <td>Clients</td>
+  <td>CVS, Perforce, SVN</td>     
+  <td>Mercurial, Git</td>
+ <tr>
+ <td>Data stored</td>
+  <td>on server </td>
+  <td>on server + locally</td>
+ </tr>
+ <tr>
+   <td>Each client keeps</td>
+   <td>"workspace" of current state</td>
+   <td>entire history</td>
+ <tr>
+   <td>Server required </td>
+   <td>for each operation</td>
+   <td>only for collaboration</td>
+ </tr>
+</table>
+</div>
+				</section>
+
+                <section> 
+                    <h2>Centralized vs Distributed</h2>
+                    <img src="image/centralized-vs-distributed.png" height="40%" />
+                    <p>Source: git-tower.com</p>
+                </section>
+
+                <section> 
+                    <h2>Git Workflow</h2>
+                </section>
+
+                <section> 
+                    <h2>Setting up the repo</h2>
+                    <p>Create a folder or navigate to existing folder:</p>
+                    <pre>cd myproject</pre>
+                    <p>Initialize a repository in the folder:</p>
+                    <pre>git init</pre>
+                    <p>All git info will be stored in <code>.git</code> folder.</p>
+                </section>
+
+                <section>
+                    <h2>Adding changes to staging</h2>
+                    Git requires you to explicitly tell it what changes to stage (edits, deletions, and adds).</p>
+
+
+                         <table>
+     <tr>
+       <th>Action</th>
+       <th>Git Command</th>
+     </tr>
+ <tr>
+  <td>Add a new file to staging:</td>     
+  <td><pre>git add myfile.txt</pre>
+</td>
+ <tr>
+    <td>Add a file's edits to staging:</td>
+    <td>
+    <pre>vi myfile.txt
+git add myfile.txt
+    </pre>
+    </td>
+ </tr>
+ <tr>
+   <td>Mark a file for deletion in staging:</td>
+   <td><pre>git rm myfile.txt</pre></td>
+ <tr>
+   <td>Remove a file's changes from staging:</td>
+   <td><pre>git reset myfile.txt</pre></td>
+</tr>
+</table>
+
+
+                </section>
+
+
+                <section class="content"> 
+                <h2>Viewing staged changes</h2>
+                <p>Always review the changes in staging before committing using <code>git status</code>:</p>
+<pre>
+username@hostname: <b>git status</b>
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#    new file:   myfile.txt
+</pre>
+                </section>
+
+
+     <section>
+     <h2>Committing changes</h2> 
+     <p>To commit the changes to the local repo, use <code>git commit</code>:</p>
+<pre>
+username@hostname: <b>git commit -m "First commit, first file."</b>
+[master (root-commit) 6853adc] First commit
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+ create mode 100644 myfile.txt
+</pre>
+<p>Try to have a descriptive message, you'll thank yourself later.</p>
+
+     </section>
+
+
+    <section>
+     <h2>Viewing commits</h2> 
+     <p>Use <code>git log</code> to see all your commits:</p>
+<pre>
+username@hostname: <b>git log</b>
+commit <b>6853adc0b6bc35f1a8ca0a6aa5e59c978148819b</b>
+Author: Pamela Fox <pamela.fox@gmail.com>
+Date:   Thu Jun 28 16:01:22 2012 -0700
+
+    First commit
+</pre>
+<p>Each commit is associated with a unique hash.</p>
+     </section>
+
+
+     <section>
+     <h2>Viewing old versions</h2> 
+<p>Use <code>git show</code> to view old versions of files:</p>
+<pre>username@hostname: <b>git show 6853adc0b6bc35f1a8ca0a6aa5e59c978148819b:myfile.txt</b>
+helllo!
+</pre>
+     </section>
+
+     <section>
+     <h2>Comparing versions</h2> 
+     <p>Use <code>git diff</code> to compare your changes to other versions:</p>
+<pre>
+username@hostname: vi myfile.txt
+username@hostname: git add myfile.txt
+username@hostname: git commit -m "Added second line"
+username@hostname: <b>git diff 6853adc0b6bc35f1a8ca0a6aa5e59c978148819b</b>
+diff --git a/myfile.txt b/myfile.txt
+index f69d457..e8215de 100644
+--- a/myfile.txt
++++ b/myfile.txt
+@@ -1 +1,2 @@
+ helllo!
++how are you?
+</pre>
+     </section>
+
+     <section>
+     <h2>Comparing versions</h2> 
+
+<p>You can also use <code>git diff</code> to compare unstaged changes:</p>
+<pre>
+vi myfile.txt
+git diff
+</pre>
+<p>Or to compare staged changes:</p>
+<pre>
+vi myfile.txt
+git add myfile.txt
+git diff --staged
+</pre>
+
+     </section>
+
+      <section>
+     <h2>Rolling back</h2> 
+
+     <p>Use <code><a href="http://www.kernel.org/pub/software/scm/git/docs/git-checkout.html">git checkout</a></code> to check out a past commit:</p>
+<pre>
+username@hostname: <b>git checkout 6853adc0b6bc35f1a8ca0a6aa5e59c978148819b</b>
+HEAD is now at 6853adc... First commit
+</pre>
+<p>Other ways to refer to commits:</p>
+<ul>
+  <li><code>git checkout master</code>
+  <li><code>git checkout HEAD</code>
+  <li><code>git checkout HEAD^0, HEAD^1, HEAD^2,...</code>
+</ul>
+<p>Best practice: commit or reset changes before checking out.</p>
+
+    </section>
+
+
+     <section> 
+        <h2>Using branches</h2>
+     <!-- <img src="http://blogs.sitepoint.com/wp-content/uploads/2010/10/branching.jpg" style="float:right"> -->
+               <table>
+     <tr>
+       <th></th>
+       <th>Command Line</th>
+       <th>Desktop</th>
+     </tr>
+ <tr>
+  <td>Create new branch:</td>
+  <td><pre>git branch mybranch</pre></td>     
+  <td><img src="" /></td>
+ <tr>
+   <td>Switch branch</td>
+  <td><pre>git checkout mybranch</pre></td>
+  <td><img src="" /></td>
+ </tr>
+ <tr>
+   <td>Do both in one command:</td>
+   <td><pre>git checkout -b mybranch</pre></td>
+   <td><img src="" /></td>
+ </tr>
+</table>
+     </section>
+
+<!--     
+    
+    
+    <div class="slide normal"> 
+     <header><h1>Merging branches</h1></header> 
+     <section class="content"> 
+     <p>Switch to the branch you want to merge into:</p>
+<pre>git checkout master</pre>
+<p>Merge changes from other branch:</p>
+<pre>git merge mybranch</pre>
+<p>If there are any conflicts, fix and commit.</p>
+<p>Optionally, delete the branch after:</p>
+<pre>git branch -d mybranch</pre>
+
+     </section>
+    </div>
+    
+   
+    
+    
+    
+    <div class="slide normal"> 
+     <header><h1>Github</h1></header> 
+     <section class="content"> 
+     
+<img src="https://a248.e.akamai.net/assets.github.com/images/modules/about_page/octocat.png?1306884374" style="float:right;">
+<ul>
+  <li>Hosted, shared git repositories
+  <li>Code reviews
+  <li>Issue tracking
+  <li>Wiki
+  <li>Strong community
+</ul>
+
+<p>Free for open-source, public projects. $$ for private projects.</p>
+     </section>
+    </div>
+    
+   
+    
+    
+    
+    <div class="slide normal"> 
+     <header><h1>Using remote repos</h1></header> 
+     <section class="content"> 
+     <p>To synchronize with a remote repository, first tell Git about it:</p>
+<pre>git remote add origin git://github.com/username/reponame</pre>
+<p>To push changes, use <code>git push</code>:</p>
+<pre>git push origin master</pre>
+<p>To pull changes, use <code>git pull</code>:</p>
+ <pre>git pull origin master</pre>
+     </section>
+    </div> -->
+
+
+
+
+				<section>
+					<h1>THE END</h1>
+					<h3>Mary Ann & Truc</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+
