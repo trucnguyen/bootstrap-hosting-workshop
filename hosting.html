@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Bootstrap Workshop at Girl Develop It</title>
+		<title>Web Hosting - Girl Develop It</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="">
+		<meta name="author" content="">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -31,42 +31,114 @@
 	</head>
 
 	<body>
-		<!-- //TODO1: outline slides, add pictures, jsfiddle, selectAll loops like each/forEach, tell audience it is not for beginners, take out SVG? step-by-step recipe, D3 cheat sheet, create 30min exercises x 2, Advanced d3: scales, domain -->
+		<!-- 
+
+
+Hosting: http://www.teaching-materials.org/hosting/slides.html#slide13
+So far everything has been local on your machine....
+Web servers 
+Types of hosting
+Free, shared webhosting, virtual,l dedicated, colocation
+http://www.slideshare.net/malditangpinay/basic-lecture-on-domains-and-webhosting
+Web protocols
+FTP, SSH
+Mention what CMS is -overkill for personal website
+
+
+		 -->
 
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Bootstrap</h1>
-					<h3>Web design yay</h3>
-					<p>Slides : http://permalink.com</p>
-					<p></a>
-					</p>
-				</section>
-				<!-- 1 -->
-				<section>
-					<h2>What is Boostrap?</h2>
-
-					<aside class="notes">
-					What is it? Responsive framework.
-					</aside>
+					<h1>Web Hosting</h1>
+					<h2>Web design yay</h2>
 				</section>
 
-				<section>
-					<h3>Group</h3>
-					<!-- TODO: jsfiddle -->
-					<p>keeping so we know how to embed code.</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-<g transform='translate(100, 100)'>
-<circle cx=20 cy=10 r=30 fill='#25B0B0'>
-</circle>
-<circle cx=100 cy=10 r=30 fill='#25B0B0'>
-</circle>
-</g>
-									
-					</code></pre>
-				</section>
+      <section>
+        <h2>What's Next?</h2>
+        <p>Once you've got your pages, you'll need somewhere to host them.</p>
+      </section>
+
+      <section>
+        <h2>Option 1: Web Hosting</h2>
+        <ol>
+          <li>Register a domain name</li>
+          <li>Choose a web host</li>
+          <li>Update name servers for domain name (DNS)</li>
+          <li>FTP files from your machine to server</li>
+          <li>Enjoy!</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Getting started</h2>
+        <p class="left">For a small personal site...</p>
+        <ul>
+          <li>Domain name registration should not cost more than $15/yr</li>
+          <li>Hosting should not cost more than $60/yr</li>
+          <li>Hosting choices may depend on supported server-side tech, security needs</li>
+        </ul>
+      </section>
+
+      <section>
+          <h2>Vendors</h2>
+          <p>Domain registration</p>
+          <ul>
+            <li><a href="http://powerpipe.com/" target="_blank">PowerPipe</a></li>
+            <li><a href="http://namecheap.com/" target="_blank">NameCheap</a></li>
+            <li>Not GoDaddy</li>
+          </ul>
+          <p>Hosting</p>
+          <ul>
+            <li><a href="http://www.meetup.com/Girl-Develop-It-Philadelphia/sponsors/" target="_blank">InMotion</a></li>
+            <li><a href="http://www.dreamhost.com/" target="_blank">DreamHost</a> ($$, an investment)</li>
+            <li><a href="http://www.digitalocean.com/" target="_blank">Digital Ocean</a> (DevOps skills/curiosity required)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>FTP - File Transfer Protocol</h2>
+          <p><strong>FTP:</strong> A process used to copy files from one machine to another.</p>
+          <p><strong>FTP Client:</strong> The software you use to do that.</p>
+        </section>
+
+        <section>
+          <h2>FTP Clients</h2>
+          <table>
+          	<tr>
+          		<th>Mac</th>
+          		<th>PC</th>
+          	</tr>
+          	<tr>
+          		<td>
+					<ul>
+						<li><a href="https://cyberduck.io/?l=en" target="_blank">CyberDuck</a></li>
+						<li><a href="https://panic.com/transmit/" target="_blank">Transmit</a></li>
+					</ul>
+          		</td>
+          		<td>
+		          <ul>
+		            <li><a href="https://filezilla-project.org/" target="_blank">FileZilla</a></li>
+		            <li><a href="http://windows.microsoft.com/en-us/windows/work-with-files-ftp-site#1TC=windows-7" target="_blank">Windows Explorer</a></li>
+		          </ul>          			
+          		</td>
+          	</tr>
+          </table>
+        </section>
+
+      <section>
+        <h2>Option 2: Github Pages</h2>
+        <p>A fantastic free hosting option.</p>
+        <ol>
+          <li>Get Github Username</li>
+          <li>Create website repository</li>
+          <li>Create and push <code>gh-pages</code> branch</li>
+          <li>Ouila!</li>
+        </ol>
+        <p>Tutorial: <a href="https://www.ostraining.com/blog/coding/github-pages/">https://www.ostraining.com/blog/coding/github-pages/</a></p>
+      </section>
 
 				<section>
 					<h2>Let's give it a try</h2>
@@ -74,54 +146,9 @@
 				</section>
 
 				<section>
-					<p>If you get stuck...<a href="#">Solution</a></p>
+					<h2>Let's give it a try</h2>
+					<p>Exercise: <a href="#">Exercise time</a></p>
 				</section>
-				<section>
-					<p>
-						paragraph.
-					</p>
-					<ul>
-						<li class="fragment">list item</li>
-						<li class="fragment">list item</li>
-						<li class="fragment">list item<</li>
-						<li class="fragment">list item<t</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Section</h2>
-					<ul>
-						<li>keeping so we know how to embed code</li>
-						<li>stuff</li>
-						<li>stuff stuff</li>
-					</ul>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-var x = d3.scale.linear()
-		.domain([0, d3.max(data)])
-		.range([0, 420]);
-d3.select(".chart")
-	.selectAll("div")
-		.data([3, 7, 21, 31, 35, 42])
-	.enter().append("div")
-		.style("width", function(d) { return x(d) + "px"; })
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Resources</h2>
-					<ul>
-						<li>stuff</a></li>
-						<li>stuff</li>
-						<li>stuff</li>
-						<li>stuff</li>
-					</ul>
-				</section>
-
-				<section>
-					<h1>THE END</h1>
-					<h3>Mary Ann & Truc</h3>
-				</section>
-
 			</div>
 
 		</div>
