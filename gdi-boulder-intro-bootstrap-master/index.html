@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Introduction to Bootstrap 3 Workshop &hearts; Girl Develop It Boulder</title>
+
+    <meta name="description" content="Introduction to Bootstrap 3 Workshop. Workshop demonstrates how to use Bootstrap as a foundation for a small web project.">
+    <meta name="author" content="Cara Jo Miller &amp; Caitlin McKenna">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <link rel="stylesheet" href="reveal/css/theme/simple.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- light editor-->
+    <link rel="stylesheet" href="reveal/lib/css/light.css">
+    <!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'reveal/css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+    <link rel="icon" type="image/x-icon" href="reveal/favicon.ico" />
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <!-- Opening -->
+            <section>
+                <img src="images/gdi_logo_badge.png" style="padding: 10px;"/>
+                <h2>Intro to Bootstrap 3</h2>
+            </section>
+            <!-- Sample Slide -->
+            <section>
+              <h2>Welcome!</h2>
+              <h4 class="blue">Wifi Info</h4>
+              <p><strong>Network:</strong> SGGuest</p>
+              <p><strong>Password:</strong> GridSend0909 </p><br/>
+              <h3>Download workshop files</h3>
+              <p>If you have not already downloaded the files for this workshop - please download them at <a href="http://gdiboulder.com/bootstrap" target="blank">gdiboulder.com/bootstrap</a></p>
+            </section>
+            <section>
+                <h2>Thanks to our sponsor:</h2>
+                <img src="images/sponsors/sendgrid.jpg" style="border:none; width: 400px;"/>
+            </section>
+            <section>
+                <h2>Meet your instructor: Cara Jo Miller</h2>
+                <ul>
+                    <li><strong>Co-founder:</strong> Girl Develop It Boulder</li>
+                    <li><strong>Lead Designer:</strong>  Simple Energy</li>
+                    <li><strong>E-mail:</strong>  carajo@girldevelopit.com</li>
+                    <li><strong>Twitter:</strong>  @corrinajo</li>
+                    <li>Lover of all things glitter</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Meet your instructor: Caitlin McKenna</h2>
+                <ul>
+                    <li><strong>Web Developer:</strong> Insight Designs</li>
+                    <li><strong>Twitter:</strong> @caitlinemckenna</li>
+                    <li>Spotify Playlist Curator</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Download workshop files</h2>
+                <p>If you have not already downloaded the files for this workshop - please download them at <a href="http://gdiboulder.com/bootstrap" target="blank">gdiboulder.com/bootstrap</a></p>
+            </section>
+            <section>
+                <h2>What we will be covering in this workshop</h2>
+                <ol>
+                    <li>Downloading Bootstrap and incorporating it into an HTML document</li>
+                    <li>Working with the Bootstrap responsive grid system</li>
+                    <li>Exploring Bootstrap’s core CSS, overriding this CSS using standard CSS techniques</li>
+                    <li>Incorporating Bootstrap’s image formatting elements and icons</li>
+                    <li>Creating and styling fully responsive interactive menus with Bootstrap.</li>
+                </ol>
+            </section>
+            <section>
+                <h2>What this workshop will <span class="blue">NOT</span> be covering</h2>
+                <ol>
+                    <li>Creating fully customized 'themes' for Bootstrap</li>
+                    <li>Designing an app</li>
+                    <li>Using all the JavaScripts with Bootstrap</li>
+                </ol>
+            </section>
+            <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">What is Bootstrap?</h2>
+            </section>
+            <section>
+                <h2>What is Bootstrap?</h2>
+                <p>Twitter's Bootstrap is a frontend UI (user interface) framework that speeds up the development of new websites and web applications.</p>
+                <img src="images/devices.png" />
+            </section>
+            <section>
+                <p>It is the #1 project on github with 65,000+ stars and over 23,000 forks</p>
+                <p>Bootstrap is an open source project on GitHub, meaning anyone can contribute to its progress.</p>
+                <img src="images/github.png" />
+            </section>
+            <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">What is a front-end framework?</h2>
+            </section>
+            <section>
+                <h2>What is a front-end framework?</h2>
+                <p>A front-end web development framework is simply a collection of production-ready HTML/CSS/JavaScript components that we can use in our designs.</p>
+            </section>
+            <section>
+                <h2>What is a front-end framework?</h2> 
+                <p>Bear in mind that Bootstrap is not just a CSS grid. It also comes with tons of features that you can use to build a fully-functional website.</p>
+            </section>
+
+            <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">Why would I want to use Bootstrap?</h2>
+            </section>
+            <section>
+                <h2>Why would I want to use Bootstrap?</h2> 
+                <p>Bootstrap is designed to be responsive, which means that your HTML elements will respond to changes in screen size.</p>
+            </section>
+            <section>
+                <p>So this desktop design:</p>
+                <img src="images/desktop.png">
+            </section>
+            <section>
+                <p>Also looks great on a tablet:</p>
+                <img src="images/iPad.png">
+            </section>
+            <section>
+                <p>And rad on a smartphone!</p>
+                <img src="images/iPhone.png">
+            </section>
+            <section>
+                <h2>Why would I want to use Bootstrap?</h2>
+                <p>Bootstrap is also mobile-first, which means that certain mobile-friendly styles (like the ability to zoom in) are included in the core files.</p>
+            </section>
+            <section>
+                <h2>Why would I want to use Bootstrap?</h2>
+                <p>Bootstrap stylishly fast-tracks your web development. It's an excellent tool to get your project up and running in no time!</p>
+            </section>
+
+            <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">What comes with Bootstrap?</h2>
+            </section>
+            <section>
+	                <h2>Download Files</h2>
+	                <p>You can download all the necessary Bootstrap files from <a href="http://getbootstrap.com/" target="blank"> getbootstrap.com</a> or from the <a href="https://github.com/twbs/bootstrap" target="blank">Bootstrap repo</a> on GitHub.</p>
+	                <small><i>(We included all of these in your Example Files folder, so no need to download from Bootstrap today!)</i></small>
+            </section>
+            <section>
+	               	<h2>The File Structure</h2>
+	                <img src="images/bootstrap-files.png">
+            </section>
+            <section>
+	                <h2>Base CSS:</h2>
+	                <p>Styles for common HTML elements, including the grid system, typography, tables, forms, and buttons.</p>
+            </section>
+            <section>
+	                <h2>Components:</h2>
+	                <p>Styles for common user interface elements, like tabs & pills, breadcrumbs, navigation bars, alerts, page headers, and more.</p>
+            </section>
+            <section>
+	                <h2>JavaScript Plugins:</h2>
+	                <p>Similar to components, Bootstrap uses JavaScript plugins for tooltips, popovers, carousels, modal windows, and other elements</p>
+            </section>
+            <section>
+                    <h2>See it in action!</h2>
+                <p>Check out some of the components by opening the <b>example.html</b> file in your browser window.</p>
+            </section>
+            <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">The Bootstrap Grid System</h2>
+            </section>
+            <section>
+                <p>Bootstrap is based on a 12-column grid, and uses CSS classes to decide the width of each element.</p>
+                <img src="images/12-grid.png" alt="12 columns" />
+            </section>
+                <section>
+                <p>Each element can take up between 1-12 columns worth of space...<!-- <br> and each element within that element can take up between 1-12 columns worth of space...<br>and each element within that element can take up between 1-12 columns worth of space... </p> -->
+                <img src="images/12-grid-overlay.png" alt="12 columns" />
+            </section>
+            <section>
+            <h2>Some Rules:</h2>
+                <ul>
+				    <li>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding.</li>
+				    <li>Use rows (<code>.row</code>) to create horizontal groups of columns.</li>
+				    <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+				 </ul>
+
+            </section>
+            <section>
+                <h2>Code Example</h2>
+<pre><code class="xml">
+<div class="container">
+    <div class="row">
+        [CONTENT FOR ROW]
+    </div>
+</div></code></pre>
+</section>
+                <section>
+                <h2>See it in action!</h2>
+                <p>Open up columns.html in your browser window.</p>
+                <p>Resize your browser to see where the columns break to fit 100% of the width.</p>
+            </section>
+            <section>
+                <h2>See it in action!</h2>
+                <p>Open up columns-fluid.html in your browser window.</p>
+                <p>Resize your browser to see where the columns break to fit 100% of the width.</p>
+            </section>
+            <section>
+            <h2>Column Classes</h2>
+				<img src="images/col-classes.png">
+            </section>
+            <section>
+                <h2>In other words...</h2>
+                <p>If you want to have two 50% columns on a mobile phone, you would use <code>.col-xs-6</code> nested in a <code>.row</code>, and the rows would be consistent on every device...</p>
+                <img src="images/12-grid-2-col.png" />
+            </section>
+            <section>
+            <h2>Two 50% width columns</h2>
+<pre><code class="xml">
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            [COLUMN 1 CONTENT]
+        </div>
+        <div class="col-xs-6">
+            [COLUMN 2 CONTENT]
+        </div>
+    </div>
+</div></code></pre>
+<p><small>Two 50% columns on a mobile phone</small></p>
+</section>
+
+            <section>
+                <p>If you want to have four 25% columns on a desktop, and would like them to break to 100% on a tablet, you would use <code>.col-md-3</code> nested in a <code>.row</code>.</p>
+                <img src="images/12-grid-4-col.png" />
+            </section>
+            <section>
+            <h2>Four 25% width columns</h2>
+<pre><code class="xml">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            [COLUMN 1 CONTENT]
+        </div>
+        <div class="col-md-4">
+            [COLUMN 2 CONTENT]
+        </div>
+        <div class="col-md-4">
+            [COLUMN 3 CONTENT]
+        </div>
+        <div class="col-md-4">
+            [COLUMN 4 CONTENT]
+        </div>
+    </div>
+</div></code></pre>
+<p><small>Four 25% columns on desktop that break to 100% width on a tablet.</small></p>
+
+</section>
+			<section>
+			<h2>Develop it!</h2>
+			<p>1. Open index.html in Sublime Text and make a simple, two-column layout.</p>
+			<p>1a. <strong>Extra credit:</strong> make a three-column layout.</p>
+            <p>2. Don't forget to put some content in your columns.</p>
+			<p>3. Resize your browser to see what happens.</p>
+			</section>
+            <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">Bootstrap Navigation</h2>
+            </section>
+            <section>
+                <p>Bootstrap has 4 different types of navigation</p>
+            </section>
+            <section>
+                <h2>1. Default</h2>
+                <p>Default Navbars are responsive meta components that serve as navigation headers for your application or site. They begin collapsed (and are toggleable) in mobile views and become horizontal as the available viewport width increases.</p>
+<pre><code class="xml">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    ...
+  </div>
+</nav>
+</code></pre>  
+
+            </section>
+            <section>
+                <h2>2. Fixed to Top</h2>
+                <p>Add <code>.navbar-fixed-top</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content.</p>
+<pre><code class="xml">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    ...
+  </div>
+</nav>
+</code></pre>  
+<p>Body Padding Required:</p>
+<pre><code class="css">
+body { padding-top: 70px; }
+</code></pre>
+            </section>
+            <section>
+                <h2>3. Fixed to Bottom</h2>
+                <p>Add <code>.navbar-fixed-bottom</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content.</p>
+<pre><code class="xml">
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container">
+    ...
+  </div>
+</nav>
+</code></pre>  
+<p>Body Padding Required:</p>
+<pre><code class="css">
+body { padding-bottom: 70px; }
+</code></pre>
+            </section>
+            <section>
+                <h2>4. Static Top</h2>
+                <p>Full-width navbar that scrolls away with the page.</p>
+<pre><code class="xml">
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    ...
+  </div>
+</nav>
+</code></pre>  
+            </section>
+			<section>
+			<h2>Develop it!</h2>
+			<p>Add a navbar of your choice to index.html.</p>
+			</section>
+            <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">Jumbotron</h2>
+            </section>
+            <section>
+                <h2>Jumbotron</h2>
+                <p>A lightweight, flexible component that can optionally extend the entire viewport to showcase key content on your site.</p>
+                <img src="images/jumbotron.png" alt="jumbotron" />
+            </section>
+            <section>
+            <h2>Code Example</h2>
+
+<pre><code class="xml">
+<div class="jumbotron">
+  <h1>Hello, world!</h1>
+  <p>...</p>
+</div>
+</code></pre>
+            </section>
+			<section>
+    			<h2>Develop it!</h2>
+    			<p>Add a jumbotron to index.html.</p>
+    			<p>In the jumbotron, include a headline, a paragraph, and a button.</p>
+			</section>
+            <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">Images Within Columns</h2>
+            </section>
+            <section>
+                <h2>Images Within Columns</h2>
+                <p>Images in Bootstrap 3 can be made responsive-friendly via the addition of the <code>.img-responsive</code> class. This applies <code>max-width: 100%;</code> and <code>height: auto;</code> to the image so that it scales nicely to the parent element.</p>
+            </section>
+             <section>
+            <p>Bootstrap also includes the following classes to make styling your images easier:</p>
+            <ul>
+	            <li><code>.img-rounded</code> applies rounded edges</li>
+	            <li><code>.img-circle</code> takes a square image and applies the style <code>border-radius: 50%;</code></li>
+	            <li><code>.img-thumbnail</code> applies a border with rounded edges to the image</li>
+            </ul>
+<pre><code class="xml">
+<img src="puppy.jpg" class="img-rounded" alt="Rounded Puppy" />
+<img src="puppy.jpg" class="img-circle" alt="Circle Puppy" />
+<img src="puppy.jpg" class="img-thumbnail" alt="Puppy Thumbnail" />
+</code></pre>
+            </section>
+			<section>
+    			<h2>Develop it!</h2>
+    			<p>Add images to your columns</p>
+    			<p>(hint: we included some puppy photos in the images folder of your example files!)</p>
+    			<p>(hint x2: remember to make your <code>img src=""</code> relative!)</p>
+			</section>
+             <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">BUTTTTONS!</h2>
+            </section>
+            <section>
+                <h2>Buttons!</h2>
+                <p>Bootstrap comes with some amazing button classes for you to use out of the box. We all know that making those perfectly subtle rounded cornered buttons, is a pain.</p>
+                <img src="images/buttons-all.png" alt="" />
+            </section>
+            <section>
+                <h2>Buttons</h2>
+<pre><code class="xml">
+<!-- Standard button -->
+<button type="button" class="btn btn-default">Default</button>
+</code></pre>
+<p>The <code>.btn</code> class can be applied to either a<br/> <code>&lt;button></code> or a <code>&lt;a></code></p>
+
+            </section>
+            <section>
+                <h2>But wait - there's more!</h2>
+                <p>Bootstrap has different classes for providing extra visual weight and identifig the primary action in a set of buttons.</p>
+<pre><code class="xml">
+<!-- Primary Action -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+</code></pre>
+
+    </section>
+            <section>
+                <h2>Fancy some bigger or smaller buttons?</h2>
+                <p>Sometimes you need a really big button for that call to action.</p>
+                <img src="images/button-sized.png" alt="" />
+            </section>
+            <section>
+                <h2>Add a size class to buttons</h2>
+                <p>For larger or smaller buttons add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code> for additional sizes.
+<pre><code class="xml">
+<button type="button" class="btn btn-primary btn-lg">
+Large button</button>
+
+<button type="button" class="btn btn-primary">
+Default button</button>
+
+<button type="button" class="btn btn-primary btn-sm">
+Small button</button>
+
+<button type="button" class="btn btn-primary btn-xs">
+Extra small button</button>
+</code></pre>
+            </section>
+            <section>
+                <h2>Develop It!</h2>
+                <p>Add buttons to your columns.</p>
+                <p>Add a larger button to your jumbotron.</p>
+                <p>Extra Credit: play with the different classes for different colors.</p>
+            </section>
+			<section>
+    			<h2>Customize!</h2>
+    			<p>Customize your CSS before you even download your Bootstrap files by visiting <a href="http://getbootstrap.com/customize/" target="blank">http://getbootstrap.com/customize/</a></p>			
+			</section>
+			<section>
+			<h2>Customize!</h2>
+			<p>Want to customize your Bootstrap page even more? Just create your own CSS and include it in the <code>head</code>, below the Bootstrap CSS to add and override styles!</p>			
+			</section>
+			<section>
+			<h2>Tips and Tricks</h2>
+			<p>Before you start creating custom CSS for your design, always check the Bootstrap documentation to see if they've already created a class that does what you want.</p>			
+			</section>
+			<section>
+			<h2>Bootstrap Resources</h2>
+			<p><a href="http://getbootstrap.com/" target="blank">Get Bootstrap:</a> All documentation and download files for Bootstrap</p> 
+			<p><a href="http://expo.getbootstrap.com/" target="blank">Bootstrap Expo:</a> Check out all the rad site designs that use Bootstrap</p>
+			<p><a href="https://github.com/twbs/bootstrap" target="blank">Bootstrap on GitHub:</a> Check out the Bootstrap repo. Maybe even contribute to the project!</p>
+
+			</section>
+            <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">Upcoming Events</h2>
+            </section>
+            <section>
+                <h2>Code &amp; Coffee</h2>
+                <p><strong>Amante Coffee on Baseline</strong></p>
+                <p>September 27th 10am - 1pm</p>
+                <p><i>NEW LOCATION!</i></p>
+            </section>
+            <section>
+                <h2>Advanced CSS3 Tools &amp; Techniques</h2>
+                <p><strong>SendGrid Boulder</strong></p>
+                <p>September 29th 6:30pm - 8pm</p>
+            </section>
+        </div>
+        <footer>
+            <div class="copyright">
+                Intro to Bootstrap 3 &hearts; Girl Develop It Boulder --
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+                    <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
+                </a>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.min.js"></script>
+
+    <script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [{
+            src: 'reveal/lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'reveal/plugin/markdown/showdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'reveal/plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'reveal/plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'reveal/plugin/zoom-js/zoom.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }, {
+            src: 'reveal/plugin/notes/notes.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }]
+    });
+    </script>
+
+</body>
+
+</html>
