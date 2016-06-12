@@ -1,0 +1,241 @@
+                <section> 
+                    <h2>Centralized vs Distributed</h2>
+                    <img src="image/centralized-vs-distributed.png" height="40%" />
+                    <p>Source: git-tower.com</p>
+                </section>
+
+                <section> 
+                    <h2>Git Workflow</h2>
+                </section>
+
+                <section> 
+                    <h2>Setting up the repo</h2>
+                    <p>Create a folder or navigate to existing folder:</p>
+                    <pre>cd myproject</pre>
+                    <p>Initialize a repository in the folder:</p>
+                    <pre>git init</pre>
+                    <p>All git info will be stored in <code>.git</code> folder.</p>
+                </section>
+
+                <section>
+                    <h2>Adding changes to staging</h2>
+                    Git requires you to explicitly tell it what changes to stage (edits, deletions, and adds).</p>
+
+
+                         <table>
+     <tr>
+       <th>Action</th>
+       <th>Git Command</th>
+     </tr>
+ <tr>
+  <td>Add a new file to staging:</td>     
+  <td><pre>git add myfile.txt</pre>
+</td>
+ <tr>
+    <td>Add a file's edits to staging:</td>
+    <td>
+    <pre>vi myfile.txt
+git add myfile.txt
+    </pre>
+    </td>
+ </tr>
+ <tr>
+   <td>Mark a file for deletion in staging:</td>
+   <td><pre>git rm myfile.txt</pre></td>
+ <tr>
+   <td>Remove a file's changes from staging:</td>
+   <td><pre>git reset myfile.txt</pre></td>
+</tr>
+</table>
+
+
+                </section>
+
+
+                <section class="content"> 
+                <h2>Viewing staged changes</h2>
+                <p>Always review the changes in staging before committing using <code>git status</code>:</p>
+<pre>
+username@hostname: <b>git status</b>
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#    new file:   myfile.txt
+</pre>
+                </section>
+
+
+     <section>
+     <h2>Committing changes</h2> 
+     <p>To commit the changes to the local repo, use <code>git commit</code>:</p>
+<pre>
+username@hostname: <b>git commit -m "First commit, first file."</b>
+[master (root-commit) 6853adc] First commit
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+ create mode 100644 myfile.txt
+</pre>
+<p>Try to have a descriptive message, you'll thank yourself later.</p>
+
+     </section>
+
+
+    <section>
+     <h2>Viewing commits</h2> 
+     <p>Use <code>git log</code> to see all your commits:</p>
+<pre>
+username@hostname: <b>git log</b>
+commit <b>6853adc0b6bc35f1a8ca0a6aa5e59c978148819b</b>
+Author: Pamela Fox <pamela.fox@gmail.com>
+Date:   Thu Jun 28 16:01:22 2012 -0700
+
+    First commit
+</pre>
+<p>Each commit is associated with a unique hash.</p>
+     </section>
+
+
+     <section>
+     <h2>Viewing old versions</h2> 
+<p>Use <code>git show</code> to view old versions of files:</p>
+<pre>username@hostname: <b>git show 6853adc0b6bc35f1a8ca0a6aa5e59c978148819b:myfile.txt</b>
+helllo!
+</pre>
+     </section>
+
+     <section>
+     <h2>Comparing versions</h2> 
+     <p>Use <code>git diff</code> to compare your changes to other versions:</p>
+<pre>
+username@hostname: vi myfile.txt
+username@hostname: git add myfile.txt
+username@hostname: git commit -m "Added second line"
+username@hostname: <b>git diff 6853adc0b6bc35f1a8ca0a6aa5e59c978148819b</b>
+diff --git a/myfile.txt b/myfile.txt
+index f69d457..e8215de 100644
+--- a/myfile.txt
++++ b/myfile.txt
+@@ -1 +1,2 @@
+ helllo!
++how are you?
+</pre>
+     </section>
+
+     <section>
+     <h2>Comparing versions</h2> 
+
+<p>You can also use <code>git diff</code> to compare unstaged changes:</p>
+<pre>
+vi myfile.txt
+git diff
+</pre>
+<p>Or to compare staged changes:</p>
+<pre>
+vi myfile.txt
+git add myfile.txt
+git diff --staged
+</pre>
+
+     </section>
+
+      <section>
+     <h2>Rolling back</h2> 
+
+     <p>Use <code><a href="http://www.kernel.org/pub/software/scm/git/docs/git-checkout.html">git checkout</a></code> to check out a past commit:</p>
+<pre>
+username@hostname: <b>git checkout 6853adc0b6bc35f1a8ca0a6aa5e59c978148819b</b>
+HEAD is now at 6853adc... First commit
+</pre>
+<p>Other ways to refer to commits:</p>
+<ul>
+  <li><code>git checkout master</code>
+  <li><code>git checkout HEAD</code>
+  <li><code>git checkout HEAD^0, HEAD^1, HEAD^2,...</code>
+</ul>
+<p>Best practice: commit or reset changes before checking out.</p>
+
+    </section>
+
+
+     <section> 
+        <h2>Using branches</h2>
+     <!-- <img src="http://blogs.sitepoint.com/wp-content/uploads/2010/10/branching.jpg" style="float:right"> -->
+               <table>
+     <tr>
+       <th></th>
+       <th>Command Line</th>
+       <th>Desktop</th>
+     </tr>
+ <tr>
+  <td>Create new branch:</td>
+  <td><pre>git branch mybranch</pre></td>     
+  <td><img src="" /></td>
+ <tr>
+   <td>Switch branch</td>
+  <td><pre>git checkout mybranch</pre></td>
+  <td><img src="" /></td>
+ </tr>
+ <tr>
+   <td>Do both in one command:</td>
+   <td><pre>git checkout -b mybranch</pre></td>
+   <td><img src="" /></td>
+ </tr>
+</table>
+     </section>
+
+<!--     
+    
+    
+    <div class="slide normal"> 
+     <header><h1>Merging branches</h1></header> 
+     <section class="content"> 
+     <p>Switch to the branch you want to merge into:</p>
+<pre>git checkout master</pre>
+<p>Merge changes from other branch:</p>
+<pre>git merge mybranch</pre>
+<p>If there are any conflicts, fix and commit.</p>
+<p>Optionally, delete the branch after:</p>
+<pre>git branch -d mybranch</pre>
+
+     </section>
+    </div>
+    
+   
+    
+    
+    
+    <div class="slide normal"> 
+     <header><h1>Github</h1></header> 
+     <section class="content"> 
+     
+<img src="https://a248.e.akamai.net/assets.github.com/images/modules/about_page/octocat.png?1306884374" style="float:right;">
+<ul>
+  <li>Hosted, shared git repositories
+  <li>Code reviews
+  <li>Issue tracking
+  <li>Wiki
+  <li>Strong community
+</ul>
+
+<p>Free for open-source, public projects. $$ for private projects.</p>
+     </section>
+    </div>
+    
+   
+    
+    
+    
+    <div class="slide normal"> 
+     <header><h1>Using remote repos</h1></header> 
+     <section class="content"> 
+     <p>To synchronize with a remote repository, first tell Git about it:</p>
+<pre>git remote add origin git://github.com/username/reponame</pre>
+<p>To push changes, use <code>git push</code>:</p>
+<pre>git push origin master</pre>
+<p>To pull changes, use <code>git pull</code>:</p>
+ <pre>git pull origin master</pre>
+     </section>
+    </div> -->

@@ -14,21 +14,23 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <!-- Bootstrap 4 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+        <script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="lib/css/dark.css">
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
 
-		<!-- Bootstrap 4 -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
-		<script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -73,7 +75,8 @@
             </section>
             <section>
                 <h2>What is a front-end framework?</h2> 
-                <p>Bear in mind that Bootstrap is not just a CSS grid. It also comes with tons of features that you can use to build a fully-functional website.</p>
+                <p>Keep in mind, Bootstrap is not just a CSS grid.</p>
+                <p>It also comes with tons of features that you can use to build a fully-functional website.</p>
             </section>
 
             <section data-background="#f05b62">
@@ -109,8 +112,8 @@
             </section>
             <section>
 	                <h2>Download Files</h2>
-	                <p>You can download all the necessary Bootstrap files from <a href="http://getbootstrap.com/" target="blank"> getbootstrap.com</a> or from the <a href="https://github.com/twbs/bootstrap" target="blank">Bootstrap repo</a> on GitHub.</p>
-	                <small><i>(We included all of these in your Example Files folder, so no need to download from Bootstrap today!)</i></small>
+	                <p>You can download all the necessary Bootstrap files from <a href="https://github.com/twbs/bootstrap/archive/v4.0.0-alpha.2.zip" target="blank"> getbootstrap.com</a> or from the <a href="https://github.com/twbs/bootstrap" target="blank">Bootstrap repo</a> on GitHub.</p>
+<!-- 	                <small><i>(We included all of these in your Example Files folder, so no need to download from Bootstrap today!)</i></small> -->
             </section>
             <section>
 	               	<h2>The File Structure</h2>
@@ -154,7 +157,7 @@
             </section>
             <section>
                 <h2>Code Example</h2>
-<pre><code class="xml">
+<pre><code class="xml"  data-trim>
 <div class="container">
     <div class="row">
         [CONTENT FOR ROW]
@@ -182,7 +185,7 @@
             </section>
             <section>
             <h2>Two 50% width columns</h2>
-<pre><code class="xml">
+<pre><code class="xml" data-trim>
 <div class="container">
     <div class="row">
         <div class="col-xs-6">
@@ -202,7 +205,7 @@
             </section>
             <section>
             <h2>Four 25% width columns</h2>
-<pre><code class="xml">
+<pre><code class="xml" data-trim>
 <div class="container">
     <div class="row">
         <div class="col-md-4">
@@ -232,7 +235,7 @@
             <section>
                 <h2>1. Default</h2>
                 <p>Default Navbars are responsive meta components that serve as navigation headers for your application or site. They begin collapsed (and are toggleable) in mobile views and become horizontal as the available viewport width increases.</p>
-<pre><code class="xml">
+<pre><code class="xml" data-trim>
 <nav class="navbar navbar-default" role="navigation">
   <div class="container">
     ...
@@ -244,7 +247,7 @@
             <section>
                 <h2>2. Fixed to Top</h2>
                 <p>Add <code>.navbar-fixed-top</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content.</p>
-<pre><code class="xml">
+<pre><code class="xml" data-trim>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     ...
@@ -252,14 +255,14 @@
 </nav>
 </code></pre>  
 <p>Body Padding Required:</p>
-<pre><code class="css">
+<pre><code class="css" data-trim>
 body { padding-top: 70px; }
 </code></pre>
             </section>
             <section>
                 <h2>3. Fixed to Bottom</h2>
                 <p>Add <code>.navbar-fixed-bottom</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content.</p>
-<pre><code class="xml">
+<pre><code class="xml" data-trim>
 <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
   <div class="container">
     ...
@@ -282,9 +285,6 @@ body { padding-bottom: 70px; }
 </nav>
 </code></pre>  
             </section>
-            <section data-background="#f05b62">
-                <h2 style="color: #fafafa;">Jumbotron</h2>
-            </section>
             <section>
                 <h2>Jumbotron</h2>
                 <p>A lightweight, flexible component that can optionally extend the entire viewport to showcase key content on your site.</p>
@@ -293,47 +293,19 @@ body { padding-bottom: 70px; }
             <section>
             <h2>Code Example</h2>
 
-<pre><code class="xml">
+<pre><code class="xml" data-trim>
 <div class="jumbotron">
-  <h1>Hello, world!</h1>
-  <p>...</p>
+  <h1 class="display-3">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="m-y-2">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
 </div>
 </code></pre>
             </section>
-			<section>
-    			<h2>Develop it!</h2>
-    			<p>Add a jumbotron to index.html.</p>
-    			<p>In the jumbotron, include a headline, a paragraph, and a button.</p>
-			</section>
-            <section data-background="#f05b62">
-                <h2 style="color: #fafafa;">Images Within Columns</h2>
-            </section>
-            <section>
-                <h2>Images Within Columns</h2>
-                <p>Images in Bootstrap 3 can be made responsive-friendly via the addition of the <code>.img-responsive</code> class. This applies <code>max-width: 100%;</code> and <code>height: auto;</code> to the image so that it scales nicely to the parent element.</p>
-            </section>
-             <section>
-            <p>Bootstrap also includes the following classes to make styling your images easier:</p>
-            <ul>
-	            <li><code>.img-rounded</code> applies rounded edges</li>
-	            <li><code>.img-circle</code> takes a square image and applies the style <code>border-radius: 50%;</code></li>
-	            <li><code>.img-thumbnail</code> applies a border with rounded edges to the image</li>
-            </ul>
-<pre><code class="xml">
-<img src="puppy.jpg" class="img-rounded" alt="Rounded Puppy" />
-<img src="puppy.jpg" class="img-circle" alt="Circle Puppy" />
-<img src="puppy.jpg" class="img-thumbnail" alt="Puppy Thumbnail" />
-</code></pre>
-            </section>
-			<section>
-    			<h2>Develop it!</h2>
-    			<p>Add images to your columns</p>
-    			<p>(hint: we included some puppy photos in the images folder of your example files!)</p>
-    			<p>(hint x2: remember to make your <code>img src=""</code> relative!)</p>
-			</section>
-             <section data-background="#f05b62">
-                <h2 style="color: #fafafa;">BUTTTTONS!</h2>
-            </section>
+
             <section>
                 <h2>Buttons!</h2>
                 <p>Bootstrap comes with some amazing button classes for you to use out of the box. We all know that making those perfectly subtle rounded cornered buttons, is a pain.</p>
@@ -341,7 +313,7 @@ body { padding-bottom: 70px; }
             </section>
             <section>
                 <h2>Buttons</h2>
-<pre><code class="xml">
+<pre><code class="xml" data-trim>
 <!-- Standard button -->
 <button type="button" class="btn btn-default">Default</button>
 </code></pre>
@@ -351,7 +323,7 @@ body { padding-bottom: 70px; }
             <section>
                 <h2>But wait - there's more!</h2>
                 <p>Bootstrap has different classes for providing extra visual weight and identifig the primary action in a set of buttons.</p>
-<pre><code class="xml">
+<pre><code class="xml" data-trim>
 <!-- Primary Action -->
 <button type="button" class="btn btn-primary">Primary</button>
 
@@ -391,6 +363,41 @@ Small button</button>
 Extra small button</button>
 </code></pre>
             </section>
+
+            <section data-background="#f05b62" style="color: #fafafa;">
+                <h2><a href="exercises/hero/hero_instructions.html">
+                    Exercise Time:
+                    Homepage Part 1
+                    </a>
+                </h2>
+
+            </section>
+            <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">Images Within Columns</h2>
+            </section>
+            <section>
+                <h2>Images Within Columns</h2>
+                <p>Images in Bootstrap 3 can be made responsive-friendly via the addition of the <code>.img-responsive</code> class. This applies <code>max-width: 100%;</code> and <code>height: auto;</code> to the image so that it scales nicely to the parent element.</p>
+            </section>
+             <section>
+            <p>Bootstrap also includes the following classes to make styling your images easier:</p>
+            <ul>
+	            <li><code>.img-rounded</code> applies rounded edges</li>
+	            <li><code>.img-circle</code> takes a square image and applies the style <code>border-radius: 50%;</code></li>
+	            <li><code>.img-thumbnail</code> applies a border with rounded edges to the image</li>
+            </ul>
+<pre><code class="xml">
+<img src="puppy.jpg" class="img-rounded" alt="Rounded Puppy" />
+<img src="puppy.jpg" class="img-circle" alt="Circle Puppy" />
+<img src="puppy.jpg" class="img-thumbnail" alt="Puppy Thumbnail" />
+</code></pre>
+            </section>
+			<section>
+    			<h2>Develop it!</h2>
+    			<p>Add images to your columns</p>
+    			<p>(hint: we included some puppy photos in the images folder of your example files!)</p>
+    			<p>(hint x2: remember to make your <code>img src=""</code> relative!)</p>
+			</section>
 
 			
 			<section>
