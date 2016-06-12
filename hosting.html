@@ -14,10 +14,10 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
-
-		<!-- For syntax highlighting -->
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="lib/css/dark.css">
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
@@ -55,18 +55,43 @@ Mention what CMS is -overkill for personal website
 					<h1>Web Hosting</h1>
 				</section>
 
+        <section>
+          <h2>What We'll Cover</h2>
+          <ul>
+            <li class="fragment"><strong>Why do we need hosting?</strong>
+            <li class="fragment">Get files on your computer to a place where everyone can access it on the web</li>
+            <li class="fragment">Components of hosting and website architecture</li>
+            <li class="fragment">Benefits and tradeoffs of various hosting providers</li>        
+          </ul>
+        </section>
+
       <section>
-        <h2>What's Next?</h2>
-        <p>Once you've got your pages, you'll need somewhere to host them.</p>
+          <h2>Your local environment</h2>
+          <ul>
+              <li class="fragment">In your past HTML classes, when you created an HTML file and opened in a browser (Chrome, Firefox) it loaded like a webpage</li>
+              <li class="fragment">But these files live only on your computer</li>
+              <li class="fragment">The address bar can tell you if files are local (on your computer) or on the World Wide Web</li>
+          </ul>
       </section>
 
       <section>
-        <h2>Option 1: Web Hosting</h2>
+        <h2>Can I use my own computer to host?</h2>
+        <ul>
+<li class="fragment">By default, random people on the internet can't access files on your computer</li>
+<li class="fragment">You can give them permission to access files on your computer though</li>
+<li class="fragment">Example: Set up a webserver on your computer</li>
+<li class="fragment">Downside: Files won't be accessible if your computer is off</li>
+<li class="fragment">Common Solution: Put your files some other computer that stays on all the time</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Steps to Web Hosting</h2>
         <ol>
           <li>Register a domain name</li>
           <li>Choose a web host</li>
           <li>Update name servers for domain name (DNS)</li>
-          <li>FTP files from your machine to server</li>
+          <li>Upload files from your computer to the server</li>
           <li>Enjoy!</li>
         </ol>
       </section>
