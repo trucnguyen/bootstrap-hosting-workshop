@@ -38,16 +38,15 @@
 	</head>
 
 	<body>
-		<!-- //TODO1: outline slides, add pictures, jsfiddle, selectAll loops like each/forEach, tell audience it is not for beginners, take out SVG? step-by-step recipe, D3 cheat sheet, create 30min exercises x 2, Advanced d3: scales, domain -->
 
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Bootstrap Continued</h1>
-					<h3>Components</h3>
-					<p>Slides : http://permalink.com</p>
+					<h1>Bootstrap</h1>
+					<h5>Overview of Select Components</h5>
+					<p>Slides: http://permalink.com</p>
 					<p></a>
 					</p>
 				</section>
@@ -57,60 +56,40 @@
                 <h2 style="color: #fafafa;">Navigation</h2>
             </section>
             <section>
-                <p>Bootstrap has 4 different types of navigation</p>
+                <h2>Navbar</h2>
+                <p>A simple wrapper for positioning branding, navigation, and other elements into a concise header.</p>
+                <p>Require a wrapping <code>.navbar</code> and a color scheme.</p>
+                <p>Navbars and their contents are fluid by default.</p>
             </section>
-            <section>
-                <h2>1. Default</h2>
-                <p>Default Navbars are responsive meta components that serve as navigation headers for your application or site. They begin collapsed (and are toggleable) in mobile views and become horizontal as the available viewport width increases.</p>
-<pre><code class="xml" data-trim>
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container">
-    ...
-  </div>
-</nav>
-</code></pre>  
 
-            </section>
             <section>
-                <h2>2. Fixed to Top</h2>
-                <p>Add <code>.navbar-fixed-top</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content.</p>
-<pre><code class="xml" data-trim>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    ...
-  </div>
-</nav>
-</code></pre>  
-<p>Body Padding Required:</p>
-<pre><code class="css" data-trim>
-body { padding-top: 70px; }
-</code></pre>
+                <h2>Navbar Example</h2>
+<iframe height='500' scrolling='no' src='//codepen.io/trucnguyen/embed/LZNBGd/?height=500&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/trucnguyen/pen/LZNBGd/'>Bootstrap Navbar</a> by Truc (<a href='http://codepen.io/trucnguyen'>@trucnguyen</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
             </section>
+
             <section>
-                <h2>3. Fixed to Bottom</h2>
-                <p>Add <code>.navbar-fixed-bottom</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content.</p>
-<pre><code class="xml" data-trim>
-<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-  <div class="container">
-    ...
-  </div>
-</nav>
-</code></pre>  
-<p>Body Padding Required:</p>
-<pre><code class="css">
-body { padding-bottom: 70px; }
-</code></pre>
+                <h2>Navbar Color Scheme</h2>
+<iframe height='265' scrolling='no' src='//codepen.io/trucnguyen/embed/NrNBrW/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/trucnguyen/pen/NrNBrW/'>Bootstrap Navbar Colors</a> by Truc (<a href='http://codepen.io/trucnguyen'>@trucnguyen</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
             </section>
+
             <section>
-                <h2>4. Static Top</h2>
-                <p>Full-width navbar that scrolls away with the page.</p>
-<pre><code class="xml">
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
-  <div class="container">
-    ...
-  </div>
-</nav>
-</code></pre>  
+                <h2>Position - Full Width</h2>
+<iframe height='500' scrolling='no' src='//codepen.io/trucnguyen/embed/RRaBGE/?height=500&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/trucnguyen/pen/RRaBGE/'>Bootstrap Navbar - Position</a> by Truc (<a href='http://codepen.io/trucnguyen'>@trucnguyen</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+            </section>
+
+            <section>
+                <h2>Position - Fix To Top</h2>
+<iframe height='500' scrolling='no' src='//codepen.io/trucnguyen/embed/jrqpVW/?height=500&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/trucnguyen/pen/jrqpVW/'>Bootstrap Navbar - Position fixed to top</a> by Truc (<a href='http://codepen.io/trucnguyen'>@trucnguyen</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+            </section>
+
+            <section>
+                <h2>Position - Fix To Bottom</h2>
+<iframe height='290' scrolling='no' src='//codepen.io/trucnguyen/embed/mEPjOv/?height=290&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/trucnguyen/pen/mEPjOv/'>Bootstrap Navbar - Position fixed to bottom</a> by Truc (<a href='http://codepen.io/trucnguyen'>@trucnguyen</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
             </section>
 
 </section>
@@ -126,19 +105,9 @@ body { padding-bottom: 70px; }
             <img src="image/jumbotron.png" alt="jumbotron" />
         </section>
         <section>
-            <h2>Code Example</h2>
-
-<pre><code class="xml" data-trim>
-<div class="jumbotron">
-  <h1 class="display-3">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="m-y-2">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p>
-</div>
-</code></pre>
+            <h2>Jumbotron Example</h2>
+<iframe height='500' scrolling='no' src='//codepen.io/trucnguyen/embed/MeyBYy/?height=500&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/trucnguyen/pen/MeyBYy/'>Bootstrap Jumbotron</a> by Truc (<a href='http://codepen.io/trucnguyen'>@trucnguyen</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
             </section>
 </section>
 
