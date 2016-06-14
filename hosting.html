@@ -38,7 +38,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Bootstrap</h1>
+					<h1>Hosting</h1>
 					<h3>Web design yay</h3>
 					<p>Slides : http://permalink.com</p>
 					<p></a>
@@ -46,7 +46,13 @@
 				</section>
 				<!-- 1 -->
 				<section>
-					<h2>What is Boostrap?</h2>
+					<h2>Domain hosting</h2>
+					<ul>
+						<li>IP addresses</li>
+						<li>Domains</li>
+						<li>DNS</li>
+						<li>Registrars</li>
+					</ul>
 
 					<aside class="notes">
 					What is it? Responsive framework.
@@ -54,57 +60,156 @@
 				</section>
 
 				<section>
-					<h3>Group</h3>
-					<!-- TODO: jsfiddle -->
-					<p>keeping so we know how to embed code.</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-<g transform='translate(100, 100)'>
-<circle cx=20 cy=10 r=30 fill='#25B0B0'>
-</circle>
-<circle cx=100 cy=10 r=30 fill='#25B0B0'>
-</circle>
-</g>
-									
-					</code></pre>
+					<h2>IP Addresses</h2>
+					<p>Internet Protocol address: The address that computers use to identify one another online, usually arranged into four sets of digits - i.e., 12.34.56.78.</p>
+					<p>Look up your IP address by entering "ip address" in Google.</p>
 				</section>
 
 				<section>
-					<h2>Let's give it a try</h2>
-					<p>Exercise: <a href="#">Exercise time</a></p>
-				</section>
-
-				<section>
-					<p>If you get stuck...<a href="#">Solution</a></p>
-				</section>
-				<section>
-					<p>
-						paragraph.
-					</p>
+					<h2>Domains</h2>
+					<div>
+						<span style="color: red;">[subdomain]</span>.
+						<span style="color: green;">[domain]</span>.
+						<span style="color: blue;">[topleveldomain]</span>
+					</div>
 					<ul>
-						<li class="fragment">list item</li>
-						<li class="fragment">list item</li>
-						<li class="fragment">list item<</li>
-						<li class="fragment">list item<t</li>
+						<li>
+							<span style="color: red;">maps</span>.
+							<span style="color: green;">google</span>.
+							<span style="color: blue;">com</span>
+						</li>
+						<li>
+							<span style="color: red;">www</span>.
+							<span style="color: green;">whitehouse</span>.
+							<span style="color: blue;">gov</span>
+						</li>
+						<li>
+							<span style="color: red;">www</span>.
+							<span style="color: green;">ontario</span>.
+							<span style="color: blue;">coop</span>
+						</li>
+					</ul>
+					<p>As .com, .net, and .org use isn't restricted, they are used more flexibly than as originally intended.</p>
+				</section>
+
+				<section>
+					<h2>DNS</h2>
+					<p>Domain Name System: Translates domain names into the IP addresses that allow machines to communicate with one another.</p>
+					<p>Look up Google's IP address by typing <br/><code>nslookup girldevelopit.com</code>.</p>
+				</section>
+
+				<section>
+					<h2>Registrars</h2>
+					<p>Used to purchase a domain.</p>
+					<p>Look for:</p>
+					<ul>
+						<li>Good customer service</li>
+						<li>Easy-to-use admin interface</li>
+						<li>Pricing (no hidden fees)</li>
+						<li>Allows transfer of names to other registrar</li>
+						<li>ICANN Accredited</li>
+					</ul>
+					<p>Popular registrars: GoDaddy, NameCheap, Google Apps</p>	
+				</section>
+
+				<section>
+					<h2>Workflow</h2>
+					<ul>
+						<li>Branch</li>
+						<li>Add, edit, delete, commit</li>
+						<li>Open a pull request</li>
+						<li>Review &amp; discuss</li>
+						<li>Deploy</li>
+						<li>Merge</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Section</h2>
+					<h2>Repo</h2>
+					<p>A <strong>repository</strong> is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets – anything your project needs. We recommend including a README, or a file with information about your project.</p>
+				</section>
+
+				<section>
+					<h2>Branch</h2>
+					<p>When you create a branch in your project, you're creating an environment where you can try out new ideas.</p>
+					<p>Changes you make on a branch don't affect the master branch.</p>
+				</section>
+
+				<section>
+					<h2>Add, edit, delete, commit</h2>
+					<p>Whenever you add, edit, or delete a file, you're making a commit, and adding them to your branch.</p>
+					<p>Each commit has an associated commit message, helpful for others to understand your code.</p>
+					<p>Each commit is a separate unit of change, letting you roll back changes.</p>
+				</section>
+
+				<section>
+					<h2>Exercise!</h2>
+					<ol>
+						<li>Create your own repo.</li>
+						<li>Commit pages/content from Day 1.</li>
+						<li>Push into repo.</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Open a pull request</h2>
+					<p>Pull Requests initiate discussion about your commits.</p>
+					<p>You can open a Pull Request at any point during the development process.</p>
+				</section>
+
+				<section>
+					<h2>Review &amp; discuss</h2>
+					<p>Pull Requests are designed to encourage and capture discussion to make your code great.</p>
+					<p>If someone comments that there is a bug, you can fix it in your branch and push up the change.</p>
+					<p>GitHub will show your new commits and any additional feedback.</p>
+				</section>
+
+				<section>
+					<h2>Deploy</h2>
+					<p>Deploy your changes to verify them in production.</p>
+					<p>If your branch causes issues, you can roll it back by deploying the existing master into production.</p>
+				</section>
+
+				<section>
+					<h2>Merge</h2>
+					<p>Merge your code with the master branch!</p>
+					<p>Once merged, Pull Requests preserve a record of the historical changes to your code.</p>
+				</section>
+
+				<section>
+					<h2>Exercise!</h2>
+					<ol>
+						<li>Fork and clone our <a href="">student directory repo</a>.</li>
+						<li>Create your own branch.</li>
+						<li>Locally edit and commit your changes.</li>
+						<li>Make a pull request!</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Let's put our pages on Github Pages!</h2>
+				</section>
+
+				<section>
+					<h2>Github Pages</h2>
 					<ul>
-						<li>keeping so we know how to embed code</li>
-						<li>stuff</li>
-						<li>stuff stuff</li>
+						<li>Public webpages hosted and published through Github</li>
+						<li>Designed to host your personal, organization, or project pages directly from a GitHub repository</li>
 					</ul>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-var x = d3.scale.linear()
-		.domain([0, d3.max(data)])
-		.range([0, 420]);
-d3.select(".chart")
-	.selectAll("div")
-		.data([3, 7, 21, 31, 35, 42])
-	.enter().append("div")
-		.style("width", function(d) { return x(d) + "px"; })
-					</code></pre>
+				</section>
+
+				<section>
+					<h2>Create a gh-pages branch</h2>
+					<p>Go to your existing repository.</p>
+					<p>Click the branch drop-down on the left-hand side.</p>
+					<p>Type in "gh-pages" and press enter.</p>
+				</section>
+
+				<section>
+					<h2>That's it!</h2>
+					<p>To go<br/>
+						<code>http://[username].github.io/[repository]</code><br/>
+						to see your live Github page.</p>
 				</section>
 
 				<section>
