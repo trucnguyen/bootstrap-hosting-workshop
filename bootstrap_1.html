@@ -30,11 +30,6 @@
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
 
-		<!-- Bootstrap 4 -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
-		<script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
-
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -47,6 +42,7 @@
 			<div class="slides">
 				<section>
 					<h1>Bootstrap</h1>
+					<h5>HTML & CSS Review, Frameworks, Content Classes</h5>
 					<p>Slides: http://permalink.com</p>
 				</section>
 
@@ -171,36 +167,34 @@ selector {
 
 <section>
             <section data-background="#f05b62">
-                <h2 style="color: #fafafa;">What is Bootstrap?</h2>
-            </section>
-            <section>
-                <h2>What is Bootstrap?</h2>
-                <p>Twitter's Bootstrap is a frontend UI (user interface) framework that speeds up the development of new websites and web applications.</p>
-                <img src="image/devices.png" />
-            </section>
-            <section>
-                <p>It is the #1 project on github with 95,000+ stars and over 42,000 forks</p>
-                <p>Bootstrap is an open source project on GitHub, meaning anyone can contribute to its progress.</p>
-                <img src="image/github.png" />
-            </section>
-            <section data-background="#f05b62">
-                <h2 style="color: #fafafa;">What is a front-end framework?</h2>
+                <h2 style="color: #fafafa;">Frameworks</h2>
             </section>
             <section>
                 <h2>What is a front-end framework?</h2>
-                <p>A collection of production-ready HTML/CSS/JavaScript components that we can use in our designs.</p>
+                <p>A collection of production-ready HTML, CSS, JavaScript components that we can use in our designs.</p>
+				<p><strong>CSS Frameworks</strong> - Usually include a reset, a grid system, styles for typography and forms. Some include support for mobile/print.</p>
+				<p><strong>Javascript Frameworks</strong> - Gives structure to your JavaScript code and keeps it organized.</p>
             </section>
             <section>
                 <h2>What is a front-end framework?</h2> 
-                <p>Bootstrap is not just a CSS grid.</p>
-                <p>Tons of features that you can use to build a fully-functional website.</p>
+				<p>Responsiveness and cross-browser consistency for free.</p>
+				<p>Modular and reusable components.</p>
+				<p></p>
             </section>
-
-            <section data-background="#f05b62">
-                <h2 style="color: #fafafa;">Why would I want to use Bootstrap?</h2>
+            <section>
+                <h2>What is Bootstrap?</h2>
+                <p>Twitter's Bootstrap is a front-end UI (user interface) framework</p>
+                <p>Speeds up the development of new websites and web applications.</p>
+                <img src="image/devices.png" />
+            </section>
+            <section>
+                <p>#1 Project on github with 95,000+ stars and over 42,000 forks</p>
+                <p>Bootstrap is an open source project on GitHub, meaning anyone can contribute to its progress.</p>
+                <img src="image/github.png" />
             </section>
             <section>
                 <h2>Why would I want to use Bootstrap?</h2> 
+                <p>Why reinvent the wheel?</p>
                 <p>Bootstrap is designed to be responsive - your HTML elements will respond to changes in screen size.</p>
             </section>
             <section>
@@ -358,11 +352,12 @@ selector {
                 <h2 style="color: #fafafa;">Images</h2>
             </section>
             <section>
-                <h2>Responsive Images</h2>
-                <p>Images in Bootstrap 4 can be made responsive-friendly via the addition of the <code>.img-fluid</code> class. This applies <code>max-width: 100%;</code> and <code>height: auto;</code> to the image so that it scales nicely to the parent element.</p>
+                <h2><a href="http://v4-alpha.getbootstrap.com/content/images/">Responsive Images</a></h2>
+                <p><a href="http://v4-alpha.getbootstrap.com/content/images/">Images in Bootstrap 4</a> can be made responsive by adding the <code>.img-fluid</code> class.
+                <p>Applies <code>max-width: 100%;</code> and <code>height: auto;</code> so it scales to fit the parent element.</p>
             </section>
              <section>
-            <p>Bootstrap also includes the following classes to make styling your images easier:</p>
+            	<h2>Other Image Styles</h2>
             <ul>
 	            <li><code>.img-rounded</code> applies rounded edges</li>
 	            <li><code>.img-circle</code> takes a square image and applies the style <code>border-radius: 50%;</code></li>
