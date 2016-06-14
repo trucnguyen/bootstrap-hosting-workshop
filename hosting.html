@@ -4,20 +4,20 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Web Hosting - Girl Develop It</title>
+		<title>Bootstrap Workshop at Girl Develop It</title>
 
-		<meta name="description" content="">
-		<meta name="author" content="">
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="lib/css/dark.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
@@ -31,173 +31,204 @@
 	</head>
 
 	<body>
-		<!-- 
-
-
-Hosting: http://www.teaching-materials.org/hosting/slides.html#slide13
-So far everything has been local on your machine....
-Web servers 
-Types of hosting
-Free, shared webhosting, virtual,l dedicated, colocation
-http://www.slideshare.net/malditangpinay/basic-lecture-on-domains-and-webhosting
-Web protocols
-FTP, SSH
-Mention what CMS is -overkill for personal website
-
-
-		 -->
+		<!-- //TODO1: outline slides, add pictures, jsfiddle, selectAll loops like each/forEach, tell audience it is not for beginners, take out SVG? step-by-step recipe, D3 cheat sheet, create 30min exercises x 2, Advanced d3: scales, domain -->
 
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Web Hosting</h1>
+					<h1>Hosting</h1>
+					<h3>Web design yay</h3>
+					<p>Slides : http://permalink.com</p>
+					<p></a>
+					</p>
+				</section>
+				<!-- 1 -->
+				<section>
+					<h2>Domain hosting</h2>
+					<ul>
+						<li>IP addresses</li>
+						<li>Domains</li>
+						<li>DNS</li>
+						<li>Registrars</li>
+					</ul>
+
+					<aside class="notes">
+					What is it? Responsive framework.
+					</aside>
 				</section>
 
-        <section>
-          <h2>What We'll Cover</h2>
-          <ul>
-            <li class="fragment"><strong>Why do we need hosting?</strong>
-            <li class="fragment">Get files on your computer to a place where everyone can access it on the web</li>
-            <li class="fragment">Components of hosting and website architecture</li>
-            <li class="fragment">Benefits and tradeoffs of various hosting providers</li>        
-          </ul>
-        </section>
+				<section>
+					<h2>IP Addresses</h2>
+					<p>Internet Protocol address: The address that computers use to identify one another online, usually arranged into four sets of digits - i.e., 12.34.56.78.</p>
+					<p>Look up your IP address by entering "ip address" in Google.</p>
+				</section>
 
-      <section>
-          <h2>Your local environment</h2>
-          <ul>
-              <li class="fragment">In your past HTML classes, when you created an HTML file and opened in a browser (Chrome, Firefox) it loaded like a webpage</li>
-              <li class="fragment">But these files live only on your computer</li>
-              <li class="fragment">The address bar can tell you if files are local (on your computer) or on the World Wide Web</li>
-          </ul>
-      </section>
-
-      <section>
-        <h2>Can I use my own computer to host?</h2>
-        <ul>
-<li class="fragment">By default, random people on the internet can't access files on your computer</li>
-<li class="fragment">You can give them permission to access files on your computer though</li>
-<li class="fragment">Example: Set up a webserver on your computer</li>
-<li class="fragment">Downside: Files won't be accessible if your computer is off</li>
-<li class="fragment">Common Solution: Put your files some other computer that stays on all the time</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Steps to Web Hosting</h2>
-        <ol>
-          <li>Register a domain name</li>
-          <li>Choose a web host</li>
-          <li>Update name servers for domain name (DNS)</li>
-          <li>Upload files from your computer to the server</li>
-          <li>Enjoy!</li>
-        </ol>
-      </section>
-
-      <section>
-        <h2>Getting started</h2>
-        <p class="left">For a small personal site...</p>
-        <ul>
-          <li>Domain name registration should not cost more than $15/yr</li>
-          <li>Hosting should not cost more than $60/yr</li>
-          <li>Hosting choices may depend on supported server-side tech, security needs</li>
-        </ul>
-      </section>
-        <section>
-          <h2>Vendor Considerations</h2>
-            <ul> 
-                <li>Reliability / Uptime</li>
-                <li>Disk space</li>
-                <li>Bandwidth</li>
-                <li>Operating System of the server</li>
-                <li>Language/DB support (LAMP? Ruby?)</li>
-                <li>Tech support</li>
-                <li>Installable modules (CMS, forums, e-commerce)</li>
-                <li>Control Panel</li>
-                <li>SSL</li>
-                <li>Email</li>
-                <li>Price</li>
-            </ul>
-        </section>
-      <section>
-          <h2>Vendors</h2>
-          <table>
-              <tr>
-                  <th>Domain Registrars</th>
-                  <th>Hosting</th>
-              </tr>
-              <tr>
-                  <td>
-                    <ul>
-                        <li><a href="http://namecheap.com/" target="_blank">NameCheap</a></li>
-                        <li><a href="http://hover.com/" target="_blank">Hover</a></li>
-                        <li><a href="http://powerpipe.com/" target="_blank">PowerPipe</a></li>
-                        <li>Not GoDaddy</li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                        <li><a href="http://www.meetup.com/Girl-Develop-It-Philadelphia/sponsors/" target="_blank">InMotion</a></li>
-                        <li><a href="http://squarespace.com" target="_blank">SquareSpace</a></li>
-                        <li><a href="http://www.dreamhost.com/" target="_blank">DreamHost</a> ($$, an investment)</li>
-                        <li><a href="http://www.digitalocean.com/" target="_blank">Digital Ocean</a> (DevOps skills/curiosity required)</li>
-                    </ul>
-                  </td>
-              </tr>
-          </table>
-
-        </section>
-
-        <section>
-          <h2>FTP - File Transfer Protocol</h2>
-          <p><strong>FTP:</strong> A process used to copy files from one machine to another.</p>
-          <p><strong>FTP Client:</strong> The software you use to do that.</p>
-        </section>
-
-        <section>
-          <h2>FTP Clients</h2>
-          <table>
-          	<tr>
-          		<th>Mac</th>
-          		<th>PC</th>
-          	</tr>
-          	<tr>
-          		<td>
+				<section>
+					<h2>Domains</h2>
+					<div>
+						<span style="color: red;">[subdomain]</span>.
+						<span style="color: green;">[domain]</span>.
+						<span style="color: blue;">[topleveldomain]</span>
+					</div>
 					<ul>
-						<li><a href="https://cyberduck.io/?l=en" target="_blank">CyberDuck</a></li>
-						<li><a href="https://panic.com/transmit/" target="_blank">Transmit</a></li>
+						<li>
+							<span style="color: red;">maps</span>.
+							<span style="color: green;">google</span>.
+							<span style="color: blue;">com</span>
+						</li>
+						<li>
+							<span style="color: red;">www</span>.
+							<span style="color: green;">whitehouse</span>.
+							<span style="color: blue;">gov</span>
+						</li>
+						<li>
+							<span style="color: red;">www</span>.
+							<span style="color: green;">ontario</span>.
+							<span style="color: blue;">coop</span>
+						</li>
 					</ul>
-          		</td>
-          		<td>
-		          <ul>
-		            <li><a href="https://filezilla-project.org/" target="_blank">FileZilla</a></li>
-		            <li><a href="http://windows.microsoft.com/en-us/windows/work-with-files-ftp-site#1TC=windows-7" target="_blank">Windows Explorer</a></li>
-		          </ul>          			
-          		</td>
-          	</tr>
-          </table>
-        </section>
+					<p>As .com, .net, and .org use isn't restricted, they are used more flexibly than as originally intended.</p>
+				</section>
 
-      <section>
-        <h2>Option 2: Github Pages</h2>
-        <p>A fantastic free hosting option.</p>
-        <ol>
-          <li>Get Github Username</li>
-          <li>Create website repository</li>
-          <li>Create and push <code>gh-pages</code> branch</li>
-          <li>Ouila!</li>
-        </ol>
-        <p>Tutorial: <a href="https://www.ostraining.com/blog/coding/github-pages/">https://www.ostraining.com/blog/coding/github-pages/</a></p>
-      </section>
+				<section>
+					<h2>DNS</h2>
+					<p>Domain Name System: Translates domain names into the IP addresses that allow machines to communicate with one another.</p>
+					<p>Look up Google's IP address by typing <br/><code>nslookup girldevelopit.com</code>.</p>
+				</section>
 
-        <section>
-            <h2>Let's give it a try</h2>
-            <p>Exercise: <a href="#">Exercise time</a></p>
-        </section>
+				<section>
+					<h2>Registrars</h2>
+					<p>Used to purchase a domain.</p>
+					<p>Look for:</p>
+					<ul>
+						<li>Good customer service</li>
+						<li>Easy-to-use admin interface</li>
+						<li>Pricing (no hidden fees)</li>
+						<li>Allows transfer of names to other registrar</li>
+						<li>ICANN Accredited</li>
+					</ul>
+					<p>Popular registrars: GoDaddy, NameCheap, Google Apps</p>	
+				</section>
+
+				<section>
+					<h2>Workflow</h2>
+					<ul>
+						<li>Branch</li>
+						<li>Add, edit, delete, commit</li>
+						<li>Open a pull request</li>
+						<li>Review &amp; discuss</li>
+						<li>Deploy</li>
+						<li>Merge</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Repo</h2>
+					<p>A <strong>repository</strong> is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets – anything your project needs. We recommend including a README, or a file with information about your project.</p>
+				</section>
+
+				<section>
+					<h2>Branch</h2>
+					<p>When you create a branch in your project, you're creating an environment where you can try out new ideas.</p>
+					<p>Changes you make on a branch don't affect the master branch.</p>
+				</section>
+
+				<section>
+					<h2>Add, edit, delete, commit</h2>
+					<p>Whenever you add, edit, or delete a file, you're making a commit, and adding them to your branch.</p>
+					<p>Each commit has an associated commit message, helpful for others to understand your code.</p>
+					<p>Each commit is a separate unit of change, letting you roll back changes.</p>
+				</section>
+
+				<section>
+					<h2>Exercise!</h2>
+					<ol>
+						<li>Create your own repo.</li>
+						<li>Commit pages/content from Day 1.</li>
+						<li>Push into repo.</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Open a pull request</h2>
+					<p>Pull Requests initiate discussion about your commits.</p>
+					<p>You can open a Pull Request at any point during the development process.</p>
+				</section>
+
+				<section>
+					<h2>Review &amp; discuss</h2>
+					<p>Pull Requests are designed to encourage and capture discussion to make your code great.</p>
+					<p>If someone comments that there is a bug, you can fix it in your branch and push up the change.</p>
+					<p>GitHub will show your new commits and any additional feedback.</p>
+				</section>
+
+				<section>
+					<h2>Deploy</h2>
+					<p>Deploy your changes to verify them in production.</p>
+					<p>If your branch causes issues, you can roll it back by deploying the existing master into production.</p>
+				</section>
+
+				<section>
+					<h2>Merge</h2>
+					<p>Merge your code with the master branch!</p>
+					<p>Once merged, Pull Requests preserve a record of the historical changes to your code.</p>
+				</section>
+
+				<section>
+					<h2>Exercise!</h2>
+					<ol>
+						<li>Fork and clone our <a href="">student directory repo</a>.</li>
+						<li>Create your own branch.</li>
+						<li>Locally edit and commit your changes.</li>
+						<li>Make a pull request!</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Let's put our pages on Github Pages!</h2>
+				</section>
+
+				<section>
+					<h2>Github Pages</h2>
+					<ul>
+						<li>Public webpages hosted and published through Github</li>
+						<li>Designed to host your personal, organization, or project pages directly from a GitHub repository</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Create a gh-pages branch</h2>
+					<p>Go to your existing repository.</p>
+					<p>Click the branch drop-down on the left-hand side.</p>
+					<p>Type in "gh-pages" and press enter.</p>
+				</section>
+
+				<section>
+					<h2>That's it!</h2>
+					<p>To go<br/>
+						<code>http://[username].github.io/[repository]</code><br/>
+						to see your live Github page.</p>
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+					<ul>
+						<li>stuff</a></li>
+						<li>stuff</li>
+						<li>stuff</li>
+						<li>stuff</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>THE END</h1>
+					<h3>Mary Ann & Truc</h3>
+				</section>
 
 			</div>
+
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
