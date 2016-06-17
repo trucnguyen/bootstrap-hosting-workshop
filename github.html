@@ -157,13 +157,14 @@
             <li>Deploy</li>
             <li>Merge</li>
           </ul>
+        <img src="image/githubworkflow.png" />
         </section>
       </section>
     <!-- REPO -->
     <section>
-      <section data-background="#f05b62">
-        <h2>Repository</h2>
-      </section>
+        <section data-background="#f05b62">
+          <h2>Repository</h2>
+        </section>
         <section>
           <h2>Repo</h2>
           <p>A <strong>repository</strong> is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets – anything your project needs. We recommend including a README, or a file with information about your project.</p>
@@ -183,8 +184,54 @@
               While a README isn't a required part of a GitHub repository, it is a very good idea to have one. READMEs are a great place to describe your project or add some documentation such as how to install or use your project. You might want to include contact information - if your project becomes popular people will want to help you out.
             </blockquote>
           </section>
+          <section>
+              <h2>Add, edit, delete, commit</h2>
+              <p>Whenever you add, edit, or delete a file, you're making a commit, and adding them to your branch.</p>
+              <p>Each commit has an associated commit message, helpful for others to understand your code.</p>
+              <p>Each commit is a separate unit of change, letting you roll back changes.</p>
+        </section>
+        <p>Initialize repository with Git</p>
+            <pre><code data-trim class ="command-line">
+  git init
+  git status
+            </code></pre>
+          </section>
+          <section>
+            <h3>Add files</h3>
+            <p>Create a new hello_world.txt file in your new folder</p>
+            <p>Check repo status</p>
+            <pre><code data-trim  class ="command-line">
+  git status
+            </code></pre>
+            <p>Tell Git to track our new file</p>
+            <pre><code data-trim  class ="command-line">
+  git add hello_world.txt
+  git status
+            </code></pre>
+            <p>File is now tracked by Git</p>
+          </section>
+          <section>
+            <h3>Changes and commits</h3>
+            <p>Open hello_world.txt and add some more text</p>
+            <pre><code data-trim  class ="command-line">
+  git status
+            </code></pre>
+            <p>Stage and commit the change</p>
+            <pre><code data-trim  class ="command-line">
+  git add hello_world.txt
+  git commit -m "First commit. Added hello world to repository."
+            </code></pre>
+          </section>
+
+          <section>
+          <h2>Exercise!</h2>
+          <ol>
+            <li>Create your own repo.</li>
+            <li>Commit pages/content from Day 1.</li>
+            <li>Push into repo.</li>
+          </ol>
+        </section>
       </section>
-    </section>
 
     <section>
         <section data-background="#f05b62">
@@ -206,11 +253,11 @@
           <section>
             <h3>Branching</h3>
             <p>Create a new branch called trucs-slides</p>
-            <pre><code contenteditable class ="command-line">
+            <pre><code data-trim  class ="command-line">
 git checkout -b trucs-slides
             </code></pre>
             <p>Add new lines to hello_world.txt</p>
-            <pre><code contenteditable class ="command-line">
+            <pre><code data-trim  class ="command-line">
 git add hello_world.txt
 git commit -m "Adding changes to trucs-slides
             </code></pre>
@@ -226,40 +273,50 @@ git commit -m "Adding changes to trucs-slides
             <h3>Branching</h3>
             <h4>Switching branches</h4>
             <p>See all branches. Branch with * is active</p>
-            <pre><code contenteditable class ="command-line">
+            <pre><code data-trim class ="command-line">
 git branch
             </code></pre>
             <p>Switch to master and look at hello_world.txt</p>
-            <pre><code contenteditable class ="command-line">
+            <pre><code data-trim  class ="command-line">
 git checkout master
             </code></pre>
             <p>Switch to version2 and look at hello_world.txt</p>
-            <pre><code contenteditable class ="command-line">
+            <pre><code data-trim  class ="command-line">
 git checkout version2
             </code></pre>
           </section>
+    </section>
 
 
+    <section>
+        <section data-background="#f05b62">
+          <h2>Deploy</h2>
+        </section>
+
+        <section>
+          <h2>Commits</h2>
+          <p>Knowledge Test: When you <code>commit</code>, will the chnages you make show up online?</p>
+          <p class="fragment">Commits are local, so they don't appear in your host environment until you <code>push</code></p>
+        </section>
+
+        <section>
+          <h2>Deploy</h2>
+          <p>Deploy your changes to verify them in production.</p>
+          <p>If your branch causes issues, you can roll it back by deploying the existing master into production.</p>
+        </section>
+    </section>
+
+
+
+    <section>
+        <section data-background="#f05b62">
+          <h2>Branching</h2>
+        </section>
     </section>
 
 <!--
-        <section>
-          <h2>Add, edit, delete, commit</h2>
-          <p>Whenever you add, edit, or delete a file, you're making a commit, and adding them to your branch.</p>
-          <p>Each commit has an associated commit message, helpful for others to understand your code.</p>
-          <p>Each commit is a separate unit of change, letting you roll back changes.</p>
-        </section>
- 
-        <section>
-          <h2>Exercise!</h2>
-          <ol>
-            <li>Create your own repo.</li>
-            <li>Commit pages/content from Day 1.</li>
-            <li>Push into repo.</li>
-          </ol>
-        </section>
 
-        <section>
+         <section>
           <h2>Open a pull request</h2>
           <p>Pull Requests initiate discussion about your commits.</p>
           <p>You can open a Pull Request at any point during the development process.</p>
@@ -270,12 +327,6 @@ git checkout version2
           <p>Pull Requests are designed to encourage and capture discussion to make your code great.</p>
           <p>If someone comments that there is a bug, you can fix it in your branch and push up the change.</p>
           <p>GitHub will show your new commits and any additional feedback.</p>
-        </section>
-
-        <section>
-          <h2>Deploy</h2>
-          <p>Deploy your changes to verify them in production.</p>
-          <p>If your branch causes issues, you can roll it back by deploying the existing master into production.</p>
         </section>
 
         <section>
