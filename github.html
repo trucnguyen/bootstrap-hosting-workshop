@@ -190,10 +190,18 @@
               <p>Each commit has an associated commit message, helpful for others to understand your code.</p>
               <p>Each commit is a separate unit of change, letting you roll back changes.</p>
         </section>
-        <p>Initialize repository with Git</p>
-            <pre><code data-trim class ="command-line">
-  git init
-  git status
+        <section>
+            <h3>Add, edit, delete, commit</h3>
+            <img src="image/commit-changes.png">
+        </section>
+        <section>
+            <h3>View history</h3>
+            <img src="image/view-history.png">
+        </section>
+        <section>
+        <h3>Initialize repository with Git</h3>
+            <pre><code data-trim class ="command-line">git init
+git status
             </code></pre>
           </section>
           <section>
@@ -306,21 +314,67 @@ git checkout version2
         </section>
     </section>
 
+        <section>
+            <section data-background="#f05b62">
+                <h2>Forking</h3>
+            </section>
+          <section>
+            <h3>Forking</h3>
+            <ul>
+              <li>There are <span class = "green">MILLIONS</span> of public repositories on GitHub</li>
+              <li>If you want to <span class = "green">use</span> or <span class = "green">contribute</span> to a repository, you can fork it.</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Forking</h3>
+            <img src = "image/bootcamp_3_fork.jpg" alt ="How to fork a repository. Image from https://help.github.com/articles/fork-a-repo"/>
+          </section>
+          <section>
+            <h3>Forking</h3>
+            <h4>Clone -  to get a local repository of your fork</h4>
+            <pre><code data-trim class ="command-line">
+cd ../
 
+git clone https://github.com/username/FORKED-REPO-NAME.git
 
-    <section>
-        <section data-background="#f05b62">
-          <h2>Branching</h2>
+cd FORKED-REPO-NAME
+
+git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
+# Assigns the original repository to a remote called "upstream"
+
+git fetch upstream
+# Pulls in changes not present in your local repository, without modifying your files
+            </code></pre>
+          </section>
         </section>
     </section>
-
-<!--
-
+    <section>
+        <section data-background="#f05b62">
+          <h2>Pull Requests & Merging</h2>
+        </section>
          <section>
-          <h2>Open a pull request</h2>
+          <h2>Pull Requests (PRs)</h2>
           <p>Pull Requests initiate discussion about your commits.</p>
           <p>You can open a Pull Request at any point during the development process.</p>
         </section>
+
+      <section>
+        <h3>Pull Requests</h3>
+        <ul>
+          <li class = "fragment">After you <code>fork</code> and <code>clone</code> a repository all pushed changes will go to your fork</li>
+          <li class = "fragment">These changes will not affect the original repository</li>
+          <li class = "fragment">If you would like to get your changes to be incorporated into the original repo, you can submit a pull request</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Start Pull Request</h3>
+        <img src = "image/start-pr-desktop.png" alt ="How to initiate a pull request. Image from https://help.github.com/articles/using-pull-requests"/>
+      </section>
+      <section>
+        <h3>Managing pull requests</h3>
+         <p>How to manage pull requests is out of the scope of this short workshop, learn more at <a href = "https://help.github.com/categories/collaborating-on-projects-using-issues-and-pull-requests/ ="_blank" alt = "Links to tutorials on pull requests and collaboration">Github Collaboration Tutorials</a>
+      </section>
+
 
         <section>
           <h2>Review &amp; discuss</h2>
@@ -332,6 +386,7 @@ git checkout version2
         <section>
           <h2>Merge</h2>
           <p>Merge your code with the master branch!</p>
+          <img src="image/merge-pr.png" />
           <p>Once merged, Pull Requests preserve a record of the historical changes to your code.</p>
         </section>
 
@@ -344,7 +399,7 @@ git checkout version2
             <li>Make a pull request!</li>
           </ol>
         </section>
- -->
+    </section>
 
       <section>
         <section data-background="#f05b62">
