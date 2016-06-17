@@ -1,0 +1,22 @@
+.navbar {
+    background-color: #f95a61;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+footer {
+  margin: 1rem;
+}
+
+.jumbotron .btn {
+    background-color: #f95a61;
+    border: #f95a61;
+}
+
+h2 {
+  margin: 2rem 0 1rem;
+}
+
+button {
+  margin-bottom: 1rem;
+}
