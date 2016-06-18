@@ -71,6 +71,12 @@ opening and closing tags</li>
 					<p>What are some elements you learned?</p>
 				</section>
 
+                <section>
+                    <h2>Element Anatomy Quiz</h2>
+                    <code style="display: block; margin: 2rem 0; color: blue;">&lt;<span style="color: red;">img</span> <span style="color: green;">src</span>="<span style="color: orange;">selfie.jpg</span>" <span style="color: green;">alt</span>="<span style="color: orange;">yours truly</span>"&gt;</code>
+                    <p>What is the element? Tag? Attribute? Value?</p>
+                </section>
+
 				<section>
 					<h2>Nesting</h2>
 					<p>Nesting is what happens when you put other containing tags inside other containing tags.</p>
@@ -81,40 +87,60 @@ opening and closing tags</li>
   &lt;/li&gt;
 &lt;/ul&gt;
 					</code></pre>
+                    <p>Incorrect:</p>
+                    <pre><code data-trim contenteditable>
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;A paragraph inside a list item&lt;/p&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;
+                    </code></pre>
 				</section>
 
 				<section>
 					<h2>Elements We Learned</h2>
 					<ul>
-						<li>Paragraph</li>
-						<li>Heading</li>
-						<li>Emphasis, strong</li>
-						<li>Anchor (link)</li>
-						<li>Image</li>
-						<li>Line break</li>
-						<li>List (unordered, ordered), list item</li>
-						<li>Tables (and their required elements)</li>
-						<li>Division, Span</li>
-						<li>Comments</li>
+						<li>Paragraph <code>&lt;p&gt;</code></li>
+						<li>Heading <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, ...</li>
+						<li>Emphasis <code>&lt;em&gt;</code> &amp; strong <code>&lt;strong&gt;</code></li>
+						<li>Anchor (link) <code>&lt;a&gt;</code></li>
+						<li>Image <code>&lt;img&gt;</code></li>
+						<li>Line break <code>&lt;br&gt;</code></li>
+						<li>List <code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code> &amp; list item <code>&lt;li&gt;</code></li>
+						<li>Tables <code>&lt;table&gt;</code>, etc.</li>
+						<li>Division <code>&lt;div&gt;</code>, span <code>&lt;span&gt;</code></li>
+						<li>Comments <code>&lt;!-- --&gt;</code></li>
 					</ul>
 				</section>
 
-				<section>
-					<h2>The CSS Rule</h2>
-					<pre><code data-trim contenteditable>
-selector {
-  property: value;
-}
-					</code></pre>
-				</section>
+                <section>
+                    <h2>Anatomy of a CSS Rule</h2>
+                    <ul>
+                        <li>Selector: Indicates which elements are affected</li>
+                        <li>Attribute: The element's feature that is affected</li>
+                        <li>Value: What's assigned to a given attribute</li>
+                    </ul>
+                    <p>What are some attributes you learned?</p>
+                </section>
+
+                <section>
+                    <h2>CSS Rule Anatomy Quiz</h2>
+                    <code style="display: block; margin: 2rem 0; text-align: left; color: blue;"><span style="color: orange;">.main img.polaroid</span> {<br>
+                        &nbsp;&nbsp;<span style="color: red;">border</span>: <span style="color: green;">1px solid black</span>;<br>
+                        &nbsp;&nbsp;<span style="color: red;">padding</span>: <span style="color: green;">0.5rem 0.5rem 2rem</span>;<br>
+                    }</code>
+                    <p>What is the selector? What is it selecting? What are the attributes? What are their values?</p>
+                </section>
 
 				<section>
-					<h2>How to add CSS to your HTML</h2>
+					<h2>Add CSS to your HTML</h2>
+                    <p>Inline</p>
 					<pre><code data-trim contenteditable>
-<!-- inline -->
 <p style="color:red">Some text.</p>
+					</code></pre>
 
-<!-- embedded-->
+                    <p>Embedded</p>
+                    <pre><code data-trim contenteditable>
 &lt;head&gt;
   <style type="text/css">
     p {
@@ -122,27 +148,29 @@ selector {
     }
   </style>
 &lt;/head&gt;
+                    </code></pre>
 
-<!-- linked -->
+                    <p>Linked</p>
+                    <pre><code data-trim contenteditable>
 &lt;head&gt;
   &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
 &lt;/head&gt;
-					</code></pre>
+                    </code></pre>
 				</section>
 
 				<section>
 					<h2>Properties We Learned</h2>
-					<ul>
-						<li>Color</li>
-						<li>Background-color</li>
-						<li>Font (and related)</li>
-						<li>Position</li>
+					<ul style="white-space: nowrap;">
+						<li><code>color</code></li>
+						<li><code>background-color</code></li>
+						<li><code>font</code> (and related)</li>
+						<li><code>position</code></li>
 				</section>
 
 				<section>
 					<h2>Specificity (in descending order)</h2>
 					<ol>
-						<li>style&nbsp;attribute</li>
+						<li><code>style</code>&nbsp;attribute</li>
 						<li>ID</li>
 						<li>Class</li>
 						<li>Element</li>
@@ -195,6 +223,7 @@ selector {
                 <h2>Why would I want to use Bootstrap?</h2> 
                 <p>Why reinvent the wheel?</p>
                 <p>Bootstrap is designed to be responsive - your HTML elements will respond to changes in screen size.</p>
+                <img src="image/bootstrap_all.jpg">
             </section>
             <section>
                 <p>So this desktop design:</p>
@@ -241,7 +270,7 @@ selector {
             </section>
             <section>
                     <h2>See it in action!</h2>
-                <p>Check out some of the components by opening the <b>example.html</b> file in your browser window.</p>
+                <p>Check out some of the components by opening the <a href="examples/example.html"><code>example.html</code></a> file in your browser window.</p>
             </section>
 </section>
 
@@ -278,12 +307,12 @@ selector {
 </section>
                 <section>
                 <h2>See it in action!</h2>
-                <p>Open up columns.html in your browser window.</p>
+                <p>Open up <a href="examples/columns.html" target="blank"><code>columns.html</code></a> in your browser window.</p>
                 <p>Resize your browser to see where the columns break to fit 100% of the width.</p>
             </section>
             <section>
                 <h2>See it in action!</h2>
-                <p>Open up columns-fluid.html in your browser window.</p>
+                <p>Open up <a href="examples/columns-fluid.html" target="blank"><code>columns-fluid.html</code></a> in your browser window.</p>
                 <p>Resize your browser to see where the columns break to fit 100% of the width.</p>
             </section>
             <section>
@@ -343,6 +372,14 @@ selector {
             <section data-background="#f05b62">
                 <h2 style="color: #fafafa;">Typography</h2>
             </section>
+            <section>
+                <h2>Typography</h2>
+                <p>Bootstrap's base <a href="http://v4-alpha.getbootstrap.com/content/typography/" target="_blank">typography classes</a> normalize headings, paragraph fonts, list styles and more.</p>
+                <p><a href="http://v4-alpha.getbootstrap.com/components/utilities/" target="_blank">Textual utility</a> classes are also included for layout</p>
+
+                <iframe height='265' scrolling='no' src='//codepen.io/trucnguyen/embed/PzGNGj/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/trucnguyen/pen/PzGNGj/'>Bootstrap - Typography</a> by Truc (<a href='http://codepen.io/trucnguyen'>@trucnguyen</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+            </section>
         </section>
 
 
@@ -361,6 +398,9 @@ selector {
 	            <li><code>.img-rounded</code> applies rounded edges</li>
 	            <li><code>.img-circle</code> takes a square image and applies the style <code>border-radius: 50%;</code></li>
 	            <li><code>.img-thumbnail</code> applies a border with rounded edges to the image</li>
+
+                <iframe height='265' scrolling='no' src='//codepen.io/trucnguyen/embed/KMzYGe/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/trucnguyen/pen/KMzYGe/'>Bootstrap - Image Styles</a> by Truc (<a href='http://codepen.io/trucnguyen'>@trucnguyen</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
             </ul>
             
             </section>
