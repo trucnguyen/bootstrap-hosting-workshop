@@ -71,6 +71,12 @@ opening and closing tags</li>
 					<p>What are some elements you learned?</p>
 				</section>
 
+                <section>
+                    <h2>Element Anatomy Quiz</h2>
+                    <code style="display: block; margin: 2rem 0; color: blue;">&lt;<span style="color: red;">img</span> <span style="color: green;">src</span>="<span style="color: orange;">selfie.jpg</span>" <span style="color: green;">alt</span>="<span style="color: orange;">yours truly</span>"&gt;</code>
+                    <p>What is the element? Tag? Attribute? Value?</p>
+                </section>
+
 				<section>
 					<h2>Nesting</h2>
 					<p>Nesting is what happens when you put other containing tags inside other containing tags.</p>
@@ -81,40 +87,60 @@ opening and closing tags</li>
   &lt;/li&gt;
 &lt;/ul&gt;
 					</code></pre>
+                    <p>Incorrect:</p>
+                    <pre><code data-trim contenteditable>
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;A paragraph inside a list item&lt;/p&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;
+                    </code></pre>
 				</section>
 
 				<section>
 					<h2>Elements We Learned</h2>
 					<ul>
-						<li>Paragraph</li>
-						<li>Heading</li>
-						<li>Emphasis, strong</li>
-						<li>Anchor (link)</li>
-						<li>Image</li>
-						<li>Line break</li>
-						<li>List (unordered, ordered), list item</li>
-						<li>Tables (and their required elements)</li>
-						<li>Division, Span</li>
-						<li>Comments</li>
+						<li>Paragraph <code>&lt;p&gt;</code></li>
+						<li>Heading <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, ...</li>
+						<li>Emphasis <code>&lt;em&gt;</code> &amp; strong <code>&lt;strong&gt;</code></li>
+						<li>Anchor (link) <code>&lt;a&gt;</code></li>
+						<li>Image <code>&lt;img&gt;</code></li>
+						<li>Line break <code>&lt;br&gt;</code></li>
+						<li>List <code>&lt;ol&gt;</code>, <code>&lt;ul&gt;</code> &amp; list item <code>&lt;li&gt;</code></li>
+						<li>Tables <code>&lt;table&gt;</code>, etc.</li>
+						<li>Division <code>&lt;div&gt;</code>, span <code>&lt;span&gt;</code></li>
+						<li>Comments <code>&lt;!-- --&gt;</code></li>
 					</ul>
 				</section>
 
-				<section>
-					<h2>The CSS Rule</h2>
-					<pre><code data-trim contenteditable>
-selector {
-  property: value;
-}
-					</code></pre>
-				</section>
+                <section>
+                    <h2>Anatomy of a CSS Rule</h2>
+                    <ul>
+                        <li>Selector: Indicates which elements are affected</li>
+                        <li>Attribute: The element's feature that is affected</li>
+                        <li>Value: What's assigned to a given attribute</li>
+                    </ul>
+                    <p>What are some attributes you learned?</p>
+                </section>
+
+                <section>
+                    <h2>CSS Rule Anatomy Quiz</h2>
+                    <code style="display: block; margin: 2rem 0; text-align: left; color: blue;"><span style="color: orange;">.main img.polaroid</span> {<br>
+                        &nbsp;&nbsp;<span style="color: red;">border</span>: <span style="color: green;">1px solid black</span>;<br>
+                        &nbsp;&nbsp;<span style="color: red;">padding</span>: <span style="color: green;">0.5rem 0.5rem 2rem</span>;<br>
+                    }</code>
+                    <p>What is the selector? What is it selecting? What are the attributes? What are their values?</p>
+                </section>
 
 				<section>
-					<h2>How to add CSS to your HTML</h2>
+					<h2>Add CSS to your HTML</h2>
+                    <p>Inline</p>
 					<pre><code data-trim contenteditable>
-<!-- inline -->
 <p style="color:red">Some text.</p>
+					</code></pre>
 
-<!-- embedded-->
+                    <p>Embedded</p>
+                    <pre><code data-trim contenteditable>
 &lt;head&gt;
   <style type="text/css">
     p {
@@ -122,27 +148,29 @@ selector {
     }
   </style>
 &lt;/head&gt;
+                    </code></pre>
 
-<!-- linked -->
+                    <p>Linked</p>
+                    <pre><code data-trim contenteditable>
 &lt;head&gt;
   &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
 &lt;/head&gt;
-					</code></pre>
+                    </code></pre>
 				</section>
 
 				<section>
 					<h2>Properties We Learned</h2>
-					<ul>
-						<li>Color</li>
-						<li>Background-color</li>
-						<li>Font (and related)</li>
-						<li>Position</li>
+					<ul style="white-space: nowrap;">
+						<li><code>color</code></li>
+						<li><code>background-color</code></li>
+						<li><code>font</code> (and related)</li>
+						<li><code>position</code></li>
 				</section>
 
 				<section>
 					<h2>Specificity (in descending order)</h2>
 					<ol>
-						<li>style&nbsp;attribute</li>
+						<li><code>style</code>&nbsp;attribute</li>
 						<li>ID</li>
 						<li>Class</li>
 						<li>Element</li>
