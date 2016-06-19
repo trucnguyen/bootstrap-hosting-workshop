@@ -67,8 +67,8 @@
                     <ul>
                         <li class="fragment">So far, you've been creating and opening "local" files in this workshop</li>
                         <li class="fragment">It's just a file living on your computer</li>
-                        <li class="fragment">You can tell from the address bar whether a file is local <code>C://My Documents</code>, <code>file:///Users/me</code></li>
-                        <li class="fragment"><strong>The goal of setting up hosting</strong> is to get those files to a place where anyone can see it</li>
+                        <li class="fragment">You can tell from the address bar whether a file is local from the address<code>C://My Documents</code>, <code>file:///Users/me</code></li>
+                        <li class="fragment"><strong>Goal of hosting</strong> is to get those files to a place where anyone can see it</li>
                     </ul>
                 </section>
 
@@ -95,6 +95,11 @@
                         <li class="fragment">Your browser fetched this page and your emails from another machine hosting the files</li>
                         <li class="fragment">From a server, managed by Google</li>
                     </ul>
+                </section>
+
+                <section>
+                    <h2>Example: Gmail</h2>
+                    <img src="image/gmail-example.png" />
                 </section>
 
 	            <section>
@@ -126,8 +131,8 @@
                 <section>
                     <h3>Hosting your client application</h3>
                     <div class="left-align">
-                        <p class="fragment">Your index.html and style.css files are client code.</p>
-                        <p class="fragment">After your web browser loads them up, they are run by your web browser to display your page.</p>
+                        <p class="fragment">Your <code>index.html</code> and <code>style.css</code> files are client code.</p>
+                        <p class="fragment">They are run by your web browser to display your page.</p>
                         <p class="fragment">To make it so that anyone's browser can load them up, we will put them on a computer somewhere else (the host)</p>
                         <p class="fragment">A server on that computer somewhere else will be the gatekeeper that lets anyone's browser load up your files (the client code)</p>
                         <p class="fragment">In this example, your code is the client code, and the server only acts as a gatekeeper</p>
@@ -152,7 +157,7 @@
                     <h3>When to use them?</h3>
                     <ul>
                         <li class="fragment">File stores: when you just need to make static files available</li>
-                        <li class="fragment">Packages: when you need a cheap way to roll out a whole website (for a small business for example), and need everything to "just work" but dont need customization
+                        <li class="fragment">Packages: when you need a cheap way to roll out a whole website (for a small business for example), and need everything to "just work" but don't need customization
                         </li>
                         <li class="fragment">Roll your own: when your software or business dictates you need full control; for example, most tech companies build their own website architectures and hosting solutions</li>
                     </ul>

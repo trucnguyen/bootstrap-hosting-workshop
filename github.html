@@ -46,7 +46,7 @@
           <h3>What we will cover today</h3>
           <ul>
             <li class ="fragment">What is version control and why should we care?</li>
-            <li class ="fragment">Basics of git -- the essential commands</li>
+            <li class ="fragment">Basics of git: the essential commands</li>
             <li class ="fragment">"Gitting" social with GitHub</li>
           </ul>
         </section>
@@ -83,8 +83,8 @@
             <h3>Working without Version Control</h3>
             <img src = "image/y-no-vcs.jpg" alt = "y u no"/>
           </section>
-
-          <section>
+      </section>
+<!--           <section>
             <h3>Working without Version Control</h3>
             <img src = "image/no-vc.png" alt = "Trying to make a grocery list with 5 people and no version control"/>
             <p>The Horror!</p>
@@ -94,8 +94,7 @@
             <img src = "image/with-vc.png" alt = "Successfully making a grocery list with 5 people and version control"/>
             <p>Rainbows and bunny rabbits!</h3>
           </section>
-        </section>
-
+-->
         <!-- VCS History -->
         <section>
           <section data-background="#f05b62">
@@ -131,21 +130,34 @@
           </section>
         </section>
 
-        <section>
         <!-- Git-->
+        <section>
           <section data-background="#f05b62">
             <h2>Intro to Git</h2>
           </section>
           <section>
-            <h3>Intro to Git</h3>
-            <p>Goals of Git Design</p>
+            <h3>Why Use Git?</h3>
+
             <ul>
-              <li>Fast -- add to your team and code base quickly</li>
-              <li>Distributed (see slide above) </li>
-              <li>Each commit has a corresponding hash (track changes from everyone)</li>
-              <li>Everyone has a local copy of the history</li>
+              <li><span class="green">Fast!</span> Access information quickly and efficiently.</li>
+              <li><span class="green">Distributed!</span> Everyone has her own local copy.</li>
+              <li><span class="green">Mind-bogglingly scalable!</span> Enables potentially thousands (millions!) of developers to work on single project.
+              <li><span class="green">Local!</span> You don't need a network connection to use it. You only need a remote server if you want to share your code with others (e.g., using GitHub).</li>
+              <li><span class="green">Branches!</span> Keep your coding experiments separate from code that is already working.</li>
+              <li>Everyone has a local copy of the <span class="green">shared files</span> and the <span class="green">history.</span></li>
             </ul>
           </section>
+          <section>
+            <h2>Git has its own peculiar vocabulary </h2>
+            <p> Here are some of the most basic ones. </p>
+             <ul>
+             <li> A <span class="green">repository</span> is where you keep all the files you want to track.</li>
+             <li> A <span class="green">branch</span> is the name for a separate line of development, with its own history.</li>
+             <li> A <span class="green">commit</span> is an object that holds information about a particular change. </li>
+             <li> <span class="green">HEAD</span> refers to the most recent commit on the current branch.</li>
+             </ul>
+            </section>
+        </section>
 
         <section>
           <h2>Workflow</h2>
@@ -158,6 +170,10 @@
             <li>Merge</li>
           </ul>
         <img src="image/githubworkflow.png" />
+        </section>
+        <section>
+          <h2>Workflow</h2>
+            <img src="image/basic-remote-workflow.png" />
         </section>
       </section>
     <!-- REPO -->
@@ -328,17 +344,17 @@ git checkout version2
             <h3>Forking</h3>
             <h4>Clone -  to get a local repository of your fork</h4>
             <pre><code data-trim class ="command-line">
-              cd ../
+cd ../
 
-              git clone https://github.com/username/FORKED-REPO-NAME.git
+git clone https://github.com/username/FORKED-REPO-NAME.git
 
-              cd FORKED-REPO-NAME
+cd FORKED-REPO-NAME
 
-              git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
-              # Assigns the original repository to a remote called "upstream"
+git remote add upstream https://github.com/original-username/FORKED-REPO-NAME.git
+# Assigns the original repository to a remote called "upstream"
 
-              git fetch upstream
-              # Pulls in changes not present in your local repository, without modifying your files
+git fetch upstream
+# Pulls in changes not present in your local repository, without modifying your files
             </code></pre>
           </section>
         </section>
@@ -366,8 +382,10 @@ git checkout version2
         <img src="image/start-pr-desktop.png" alt ="How to initiate a pull request. Image from https://help.github.com/articles/using-pull-requests"/>
       </section>
       <section>
-        <h3>Managing pull requests</h3>
-         <p>How to manage pull requests is out of the scope of this short workshop, learn more at <a href = "https://help.github.com/categories/collaborating-on-projects-using-issues-and-pull-requests" target="_blank" alt="Links to tutorials on pull requests and collaboration">Github Collaboration Tutorials</a>
+        <h3>Managing Pull Requests</h3>
+         <p>If you are the owner of repo, you will review and decide whether to merge in the pull requests you receive.</p>
+
+Learn more at <a href = "https://help.github.com/categories/collaborating-on-projects-using-issues-and-pull-requests" target="_blank" alt="Links to tutorials on pull requests and collaboration">Github Collaboration Tutorials</a>
       </section>
 
 
@@ -384,6 +402,14 @@ git checkout version2
           <img src="image/merge-pr.png" />
           <p>Once merged, Pull Requests preserve a record of the historical changes to your code.</p>
         </section>
+          <section>
+            <h3>What could possibly go wrong?</h3>
+            <img src="image/merge_conflicts_are_coming.jpg"/>
+          </section>
+          <section>
+            <h3>What is a merge conflict?</h3>
+            <img src="image/merge-conflict.png"/>
+          </section>
       </section>
 
       <section data-background="#f05b62">
@@ -392,7 +418,7 @@ git checkout version2
 
       <section>
         <section data-background="#f05b62">
-            <h2>Let's put our websites on Github Pages!</h2>
+            <h2>Let's your site on the web!</h2>
         </section>
 
         <section>

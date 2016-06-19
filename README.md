@@ -1,10 +1,10 @@
 # Intro to Bootstrap and Web Hosting 
 
 Slides and materials are hosted:
-http://tinyurl.com/gdi-bootstrap-1
-http://tinyurl.com/gdi-bootstrap-2
-http://tinyurl.com/gdi-webhosting
-http://tinyurl.com/gdi-github
+* [Bootstrap Part 1] (http://tinyurl.com/gdi-bootstrap-1)
+* [Bootstrap Part 2] (http://tinyurl.com/gdi-bootstrap-2)
+* [Web Hosting] (http://tinyurl.com/gdi-webhosting)
+* [Github] http://tinyurl.com/gdi-github
 
 
 ## Course description
@@ -13,9 +13,8 @@ In this two-day project-based workshop, you'll learn how to go beyond with HTML 
 The comprehensive workshop will be a mix of lectures, pair programming, and hands-on exercises building your webpage, and will be taught by Mary Ann Jawili, Software Engineer at Salesforce, and Truc Nguyen, UX Designer at AdRoll.
 
 By the end of this two-day workshop, you will know the following:
-• How to make a responsive web page using a framework like Bootstrap (e.g making your web page look great on phones, tablets, and desktop computers)
-
-• How to host it on Github Pages so everyone can check out your new website!
+* How to make a responsive web page using a framework like Bootstrap (e.g making your web page look great on phones, tablets, and desktop computers)
+* How to host it on Github Pages so everyone can check out your new website!
 
 ### Prerequisites:
 
